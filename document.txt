@@ -3,14 +3,14 @@
 - kanban (https://github.com/MaximLopez/frontend-AllezCine/projects/1) : tout le monde mais surtout maxim et ludo
 - menu hamburger : bootstrap - Ludo
 - en-tête jumbotron : slide - Ludo
-- boutons réseaux sociaux : html/css
+- boutons réseaux sociaux : html/css (animation)
 - section films : modal (bootstrap)
 - site en responsive : css
-- pop-up entrée : contrainte de l'âge (pop-up) : js
+- pop-up entrée : contrainte de l'âge (pop-up) : js : seb
 - box : cookies : js - maud
 - box : formulaires connexion avec boutons login et register : js - maud
-- section featured movies : plus de films, moins de films (js)
-- section shop movies : filtrer par genre (js) - seb
+- section featured movies : plus de films, moins de films, filtrer par genre (html + js) - seb
+- section shop movies : gallerie défilement avec bouton (html + js)
 - section contact us : formulaire HTML direct (entrées = pop-up) : js - maud
 - footer : bouton rouge + flèche blanche : js + css : seb
 - bonus : section contact us : map - seb
