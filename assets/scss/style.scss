@@ -1,3 +1,5 @@
+// CONTACT FORM
+
 // Footer
 #siteFooter {
     background-color: black;
@@ -13,11 +15,11 @@
     }
     #subscribeFooter {
         color: #fe4240;
-        font-size: 1.5em;
+        font-size: 1.2em;
         text-align: center;
     }
     .motOneFooter, .motTwoFooter {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     .motOneFooter {
         color: #fe4240;
@@ -27,6 +29,10 @@
     }
     .titleFooter {
         color: gray;
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
-};
+    #connectFooter{
+        text-align: center;
+        align-content: center;
+    }
+}
