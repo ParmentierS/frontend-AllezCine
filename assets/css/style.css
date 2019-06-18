@@ -1,1 +1,9 @@
-/* No CSS */
+.jumbotron-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.col-titre {
+  color: red;
+  position: relative;
+}
