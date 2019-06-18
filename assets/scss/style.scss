@@ -7,7 +7,7 @@ body {
 
 //couleur du titre 'AllezCine!'
 #allez-color {
-    color: red;
+    color: #fe4240;
 }
 
 #cine-color {
@@ -22,7 +22,7 @@ body {
 
 //couleur du texte 'Home' sur la NavBar
 #home-color {
-    color: red;
+    color: #fe4240;
 }
 
 
@@ -34,7 +34,7 @@ body {
 
 .dropdown {
     list-style: none;
-    background: red;
+    background: #fe4240;
 }
 
 .navMenu {
@@ -83,4 +83,16 @@ body {
     color: #fff;
     background-color: #b91773;
     border-color: #fff;
+}
+
+#navBas {
+    background-color: #fe4240;
+    height: 40px;
+    #numberColor{
+        color: white;
+    }
+}
+.carousel-item:active {
+    color: #fe4240;
+    background-color: #fe4240;
 }

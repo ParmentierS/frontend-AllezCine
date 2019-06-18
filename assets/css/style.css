@@ -6,7 +6,7 @@
 }
 
 #allez-color {
-  color: red;
+  color: #fe4240;
 }
 
 #cine-color {
@@ -20,7 +20,7 @@
 }
 
 #home-color {
-  color: red;
+  color: #fe4240;
 }
 
 .jumbotron-fluid,
@@ -31,7 +31,7 @@
 
 .dropdown {
   list-style: none;
-  background: red;
+  background: #fe4240;
 }
 
 .navMenu {
@@ -79,4 +79,18 @@
   color: #fff;
   background-color: #b91773;
   border-color: #fff;
+}
+
+#navBas {
+  background-color: #fe4240;
+  height: 40px;
+}
+
+#navBas #numberColor {
+  color: white;
+}
+
+.carousel-item:active {
+  color: #fe4240;
+  background-color: #fe4240;
 }
