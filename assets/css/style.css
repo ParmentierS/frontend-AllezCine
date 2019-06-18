@@ -1,1 +1,38 @@
-/* No CSS */
+#siteFooter {
+  background-color: black;
+}
+
+#siteFooter .input-group-text:hover {
+  background-color: white;
+  color: black;
+}
+
+#siteFooter #basic-addon2 {
+  background-color: red;
+  color: white;
+  border: 0%;
+  border-radius: 0%;
+}
+
+#siteFooter #subscribeFooter {
+  color: red;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#siteFooter .motOneFooter, #siteFooter .motTwoFooter {
+  font-size: 1.5em;
+}
+
+#siteFooter .motOneFooter {
+  color: red;
+}
+
+#siteFooter .motTwoFooter {
+  color: white;
+}
+
+#siteFooter .titleFooter {
+  color: gainsboro;
+  font-size: 1.1em;
+}

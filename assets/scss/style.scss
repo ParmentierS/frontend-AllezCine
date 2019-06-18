@@ -1,0 +1,32 @@
+// Footer
+#siteFooter {
+    background-color: black;
+    #btn-danger {
+        border-radius: 0%;
+    }
+    }
+    #basic-addon2 {
+        background-color: red;
+        color: white;
+        border: 0%;
+        border-radius: 0%;
+    }
+    #subscribeFooter {
+        color: red;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .motOneFooter, .motTwoFooter {
+        font-size: 1.5em;
+    }
+    .motOneFooter {
+        color: red;
+    }
+    .motTwoFooter{
+        color: white;
+    }
+    .titleFooter {
+        color: gray;
+        font-size: 1.1em;
+    }
+}
