@@ -109,19 +109,22 @@ let performingAnimation=false;
 
 async function scrollFunctionPlanner(event)
 {
-    if(clockIsTicking)
+    if(performingAnimation)
     {
-        console.log("clock is ticking event rejected",event.pageY);
+        console.log("we are doing an animation => event rejected",event.pageY);
         return "";
     }
     performingAnimation=true;
-    await  scrollFunction(event);
+    await  scrollFunction(event);//there is only one event that can access the button at the same time
     performingAnimation=false;
     
 }
 async function scrollFunction(event) {
 
     let lastScrollPosition=event.pageY;
+
+    //could be improved to switch between both behaviours dynamically
+    
     if (lastScrollPosition>600 && !alreadyVisible) 
     {
         for(let opacity=0;opacity<=1;opacity+=0.1)
@@ -130,7 +133,7 @@ async function scrollFunction(event) {
             document.getElementById("thatSuperScrollButton2").style.opacity = opacity;
             await sleep(50);
         }
-        console.log("testaudessusde601",lastScrollPosition, event.pageY, alreadyVisible, clockIsTicking);
+        console.log("testaudessusde601",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
         alreadyVisible=true;
     
     } 
@@ -142,11 +145,11 @@ async function scrollFunction(event) {
             document.getElementById("thatSuperScrollButton2").style.opacity = opacity;
             await sleep(50);
         }
-        console.log("testendessousde599",lastScrollPosition, event.pageY, alreadyVisible, clockIsTicking);
+        console.log("testendessousde599",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
         alreadyVisible=false;
     }
     else{
-        console.log("else",lastScrollPosition, event.pageY, alreadyVisible, clockIsTicking);
+        console.log("else",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
 
     }
     
