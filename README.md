@@ -7,3 +7,14 @@
 ---
 
 ## Introduction
+
+---
+
+# Table des matières
+# Lien des consoles
+[Consignes](https://github.com/becodeorg/CRL-Turing-3.11/tree/master/Projets/AllezCine)
+## Objectifs
+* Respecter un design fourni.
+* Consolider les acquis en git, HTML, CSS et Bootstrap.
+* Utiliser javascript et jQuery dans un projet réaliste.
+* Avoir un nouveau projet à ajouter à son portfolio.
