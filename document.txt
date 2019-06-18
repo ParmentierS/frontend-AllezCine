@@ -1,16 +1,19 @@
 - site one-page (https://github.com/becodeorg/CRL-Turing-3.11/blob/master/Projets/AllezCine/layout-one-v2.jpg)
-- readme + description (seb peut faire une version en anglais du readme)
-- kanban (https://github.com/MaximLopez/frontend-AllezCine/projects/1)
-- menu hamburger : bootstrap
-- en-tête jumbotron : slide 
+- readme + description : maxim (seb peut faire une version en anglais du readme)
+- kanban (https://github.com/MaximLopez/frontend-AllezCine/projects/1) : tout le monde mais surtout maxim et ludo
+- menu hamburger : bootstrap - Ludo
+- en-tête jumbotron : slide - Ludo
 - boutons réseaux sociaux : html/css
 - section films : modal (bootstrap)
 - site en responsive : css
 - pop-up entrée : contrainte de l'âge (pop-up) : js
-- box : cookies : js
-- box : formulaires connexion avec boutons login et register : js
+- box : cookies : js - maud
+- box : formulaires connexion avec boutons login et register : js - maud
 - section featured movies : plus de films, moins de films (js)
-- section shop movies : filtrer par genre (js)
-- section contact us : formulaire (entrées = pop-up) : js
-- footer : bouton rouge + flèche blanche : js + css
+- section shop movies : filtrer par genre (js) - seb
+- section contact us : formulaire HTML direct (entrées = pop-up) : js - maud
+- footer : bouton rouge + flèche blanche : js + css : seb
+- bonus : section contact us : map - seb
+- bonus : newsletter
+
 
