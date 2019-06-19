@@ -94,3 +94,47 @@
   color: #fe4240;
   background-color: #fe4240;
 }
+
+.carousel-item:active #siteFooter {
+  background-color: black;
+}
+
+.carousel-item:active #siteFooter #btn-danger {
+  border-radius: 0%;
+}
+
+.carousel-item:active #basic-addon2 {
+  background-color: #fe4240;
+  color: white;
+  border: 0%;
+  border-radius: 0%;
+}
+
+.carousel-item:active #subscribeFooter {
+  color: #fe4240;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.carousel-item:active .motOneFooter, .carousel-item:active .motTwoFooter {
+  font-size: 1.2em;
+}
+
+.carousel-item:active .motOneFooter {
+  color: #fe4240;
+}
+
+.carousel-item:active .motTwoFooter {
+  color: white;
+}
+
+.carousel-item:active .titleFooter {
+  color: gray;
+  font-size: 1.2em;
+}
+
+.carousel-item:active #connectFooter {
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}

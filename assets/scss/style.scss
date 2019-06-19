@@ -95,4 +95,41 @@ body {
 .carousel-item:active {
     color: #fe4240;
     background-color: #fe4240;
+// CONTACT FORM
+
+// Footer
+#siteFooter {
+    background-color: black;
+    #btn-danger {
+        border-radius: 0%;
+    }
+    }
+    #basic-addon2 {
+        background-color:#fe4240;
+        color: white;
+        border: 0%;
+        border-radius: 0%;
+    }
+    #subscribeFooter {
+        color: #fe4240;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    .motOneFooter, .motTwoFooter {
+        font-size: 1.2em;
+    }
+    .motOneFooter {
+        color: #fe4240;
+    }
+    .motTwoFooter{
+        color: white;
+    }
+    .titleFooter {
+        color: gray;
+        font-size: 1.2em;
+    }
+    #connectFooter{
+        text-align: center;
+        align-content: center;
+    }
 }
