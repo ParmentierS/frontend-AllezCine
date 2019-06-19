@@ -100,7 +100,7 @@ if(parentOfButton)
 
 
 document.getElementById("thatSuperScrollButton1").style.opacity = 0;
-document.getElementById("thatSuperScrollButton2").style.opacity = 0;
+//document.getElementById("thatSuperScrollButton2").style.opacity = 0;
 
 window.addEventListener("scroll",scrollFunctionPlanner);
 
@@ -130,10 +130,10 @@ async function scrollFunction(event) {
         for(let opacity=0;opacity<=1;opacity+=0.1)
         {
             document.getElementById("thatSuperScrollButton1").style.opacity = opacity;
-            document.getElementById("thatSuperScrollButton2").style.opacity = opacity;
+            //document.getElementById("thatSuperScrollButton2").style.opacity = opacity;
             await sleep(50);
         }
-        console.log("testaudessusde601",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
+        //console.log("testaudessusde601",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
         alreadyVisible=true;
     
     } 
@@ -142,14 +142,14 @@ async function scrollFunction(event) {
         for(let opacity=1;opacity>=0;opacity-=0.1)
         {
             document.getElementById("thatSuperScrollButton1").style.opacity = opacity;
-            document.getElementById("thatSuperScrollButton2").style.opacity = opacity;
+            //document.getElementById("thatSuperScrollButton2").style.opacity = opacity;
             await sleep(50);
         }
-        console.log("testendessousde599",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
+        //console.log("testendessousde599",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
         alreadyVisible=false;
     }
     else{
-        console.log("else",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
+        //console.log("else",lastScrollPosition, event.pageY, alreadyVisible, performingAnimation);
 
     }
     
