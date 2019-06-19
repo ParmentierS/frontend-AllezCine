@@ -26,6 +26,23 @@ body {
 // Couleur de 'genre', 'année', ... 
 .navMenu {
     color: white;
+    background-color: black;
+    opacity: 0.5;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &:hover {
+        background-color: #fe4240;
+        opacity: 1;
+    }
+}
+.dropdown-toggle{
+    color: white;
+    opacity: 1;
+    &:hover {
+        color: white;
+    }
 }
 //Taille texte NavBar
 #home-color, .navMenu {
@@ -68,7 +85,10 @@ body {
     position: relative;
     right: 55px;
     opacity: 0.5;
-}
+    &:hover{
+        background: transparent;
+    }//AJOUTER JS POUR FAIRE DISPARAITRE CADRE VERT
+} 
 
 
 //titre 'Latest Movie Online'

@@ -25,6 +25,26 @@
 
 .navMenu {
   color: white;
+  background-color: black;
+  opacity: 0.5;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navMenu:hover {
+  background-color: #fe4240;
+  opacity: 1;
+}
+
+.dropdown-toggle {
+  color: white;
+  opacity: 1;
+}
+
+.dropdown-toggle:hover {
+  color: white;
 }
 
 #home-color, .navMenu {
@@ -80,6 +100,10 @@
   position: relative;
   right: 55px;
   opacity: 0.5;
+}
+
+#searchButton:hover {
+  background: transparent;
 }
 
 #carouselTitre {
