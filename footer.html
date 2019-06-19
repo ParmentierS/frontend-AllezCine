@@ -23,24 +23,25 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <!--Font Awesome-->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Accueil</title>
 </head>
 
 <body>
+    <!-- CARD -->
     <div class="container mt-4">
+
         <h2>SHOP MOVIES</h2>
-        <div class="card" style="width: 18rem;">
-                <img src="assets/img/Hostel-Card.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Hostel</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+            <img src="assets/img/Card-Hostel.png" class="card-img-top" alt="Card of the movies Hostel">
+            <div class="card-body">
+                <h5 class="card-title">Hostel</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     </div>
     <!--Contact US-->
     <div class="container mt-4">
@@ -83,10 +84,11 @@
     </div>
     <!--Footer-->
     <footer>
+        <!--Subscribe to us-->
         <div class="jumbotron jumbotron-fluid" id="siteFooter">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-md-5 offset-md-3">
                         <p class="footerSubscribe" id="subscribeFooter">SUBSCRIBE TO US</p>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Enter your email..."
@@ -96,63 +98,114 @@
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <div class="col-2"><span class="titleFooter">RELEASE</span>
+                    <!-- RELEASE -->
+                    <div class="col-2">
+                        <span class="titleFooter">RELEASE</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                            <p>2016</p>
+                                            <p>2015</p>
+                                            <p>2014</p>
+                                            <p>2013</p>
+                                            <p>2012</p>
+                                            <p>2011</p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </div>
-                    <div class="col-2"><span class="titleFooter">MOVIES</span></div>
-                    <div class="col-2"><span class="titleFooter">REVIEW MOVIES</span></div>
-                    <div class="col-2"><span class="titleFooter">LATEST MOVIES</span></div>
-                    <div class="col-4"><span class="motOneFooter">ALLEZ</span><span class="motTwoFooter">CINE!</span>
+                    <!-- MOVIES -->
+                    <div class="col-2">
+                        <span class="titleFooter">MOVIES</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                            <p>ADVENTURE</p>
+                                            <p>COMEDY</p>
+                                            <p>FANTASY</p>
+                                            <p>ACTION</p>
+                                            <p>MOVIES</p>
+                                            <p>HORROR</p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- REVIEW MOVIES -->
+                    </div>
+                    <div class="col-2">
+                        <span class="titleFooter">REVIEW MOVIES</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                            <p>
+                                                <span class="badge badge-secondary">Comedy</span>
+                                                <span class="badge badge-secondary">Horror</span>
+                                                <span class="badge badge-secondary">Historical</span>
+                                                <span class="badge badge-secondary">Romantic</span>
+                                                <span class="badge badge-secondary">Love</span>
+                                                <span class="badge badge-secondary">Action</span>
+                                                <span class="badge badge-secondary">Reviews</span>
+                                                <span class="badge badge-secondary">Comedy</span>
+                                                <span class="badge badge-secondary">Horror</span>
+                                                <span class="badge badge-secondary">Historical</span>
+                                                <span class="badge badge-secondary">Romantic</span>
+                                                <span class="badge badge-secondary">Love</span>
+                                                <span class="badge badge-secondary">Comedy</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- LATEST MOVIES -->
+                    <div class="col-2">
+                        <span class="titleFooter">LATEST MOVIES</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- ALLEZCINE! -->
+                    <div class="col-4">
+                        <span class="motOneFooter">ALLEZ</span>
+                        <span class="motTwoFooter">CINE!</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-2">
-                        <table class="table">
+                <div class="row lines">
+                    <div class="col-md-12">
+                        <table class="table release">
                             <thead>
                                 <tr>
-                                    <th scope="col">
-                                        <p>2016</p>
-                                        <p>2015</p>
-                                        <p>2014</p>
-                                        <p>2013</p>
-                                        <p>2012</p>
-                                        <p>2011</p>
-                                    </th>
+                                    <th></th>
                                 </tr>
                             </thead>
                         </table>
-                    </div>
-                    <div class="col-2">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <p>ADVENTURE</p>
-                                        <p>COMEDY</p>
-                                        <p>FANTASY</p>
-                                        <p>ACTION</p>
-                                        <p>MOVIES</p>
-                                        <p>HORROR</p>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="col-2">
-                        <tr>
-                            <span class="badge badge-secondary">Comedy</span>
-                            <span class="badge badge-secondary">Horror</span>
-                            <span class="badge badge-secondary">Historical</span>
-                            <span class="badge badge-secondary">Romantic</span>
-                            <span class="badge badge-secondary">Love</span>
-                            <span class="badge badge-secondary">Action</span>
-                            <span class="badge badge-secondary">Reviews</span>
-                            <span class="badge badge-secondary">Comedy</span>
-                            <span class="badge badge-secondary">Horror</span>
-                            <span class="badge badge-secondary">Historical</span>
-                            <span class="badge badge-secondary">Romantic</span>
-                            <span class="badge badge-secondary">Love</span>
-                            <span class="badge badge-secondary">Comedy</span>
-                        </tr>
                     </div>
                 </div>
                 <div class="row justify-content-center">
