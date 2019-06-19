@@ -29,8 +29,9 @@
   opacity: 0.5;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px;
 }
 
 .navMenu:hover {
