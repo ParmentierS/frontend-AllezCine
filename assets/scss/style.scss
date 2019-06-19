@@ -1,3 +1,5 @@
+// SHOP
+
 // CONTACT FORM
 
 // Footer
@@ -5,7 +7,6 @@
     background-color: black;
     #btn-danger {
         border-radius: 0%;
-    }
     }
     #basic-addon2 {
         background-color:#fe4240;
@@ -15,11 +16,11 @@
     }
     #subscribeFooter {
         color: #fe4240;
-        font-size: 0.6em;
+        font-size: 1.5em;
         text-align: center;
     }
-    .motOneFooter, .motTwoFooter {
-        font-size: 0.6em;
+    .motOneFooter, .motTwoFooter, .titleFooter {
+        font-size: 1.1em;
     }
     .motOneFooter {
         color: #fe4240;
@@ -29,10 +30,15 @@
     }
     .titleFooter {
         color: gray;
-        font-size: 0.6em;
     }
-    #connectFooter{
-        text-align: center;
-        align-content: center;
+    .listeFooter {
+        font-size: 0.7em;
+    }
+}
+#connectFooter{
+    text-align: center;
+    align-content: center;
+    p {
+        font-size: 1.3em;
     }
 }

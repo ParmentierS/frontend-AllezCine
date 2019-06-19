@@ -2,30 +2,29 @@
   background-color: black;
 }
 
-#siteFooter .input-group-text:hover {
-  background-color: white;
-  color: black;
+#siteFooter #btn-danger {
+  border-radius: 0%;
 }
 
 #siteFooter #basic-addon2 {
-  background-color: red;
+  background-color: #fe4240;
   color: white;
   border: 0%;
   border-radius: 0%;
 }
 
 #siteFooter #subscribeFooter {
-  color: red;
+  color: #fe4240;
   font-size: 1.5em;
   text-align: center;
 }
 
-#siteFooter .motOneFooter, #siteFooter .motTwoFooter {
-  font-size: 1.5em;
+#siteFooter .motOneFooter, #siteFooter .motTwoFooter, #siteFooter .titleFooter {
+  font-size: 1.1em;
 }
 
 #siteFooter .motOneFooter {
-  color: red;
+  color: #fe4240;
 }
 
 #siteFooter .motTwoFooter {
@@ -33,6 +32,19 @@
 }
 
 #siteFooter .titleFooter {
-  color: gainsboro;
-  font-size: 1.1em;
+  color: gray;
+}
+
+#siteFooter .listeFooter {
+  font-size: 0.7em;
+}
+
+#connectFooter {
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#connectFooter p {
+  font-size: 1.3em;
 }
