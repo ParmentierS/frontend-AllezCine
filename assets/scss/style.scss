@@ -5,94 +5,125 @@ body {
     }
 }
 
-//couleur du titre 'AllezCine!'
+//couleur du titre 'AllezCine!' - Allez
 #allez-color {
     color: #fe4240;
 }
-
+//couleur du titre 'AllezCine!' - Cine!
 #cine-color {
     color: white;
 }
-
+//Titre ALLEZCINE!
 #cine-color,
 #allez-color {
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: 900;
 }
-
 //couleur du texte 'Home' sur la NavBar
 #home-color {
     color: #fe4240;
 }
+// Couleur de 'genre', 'année', ... 
+.navMenu {
+    color: white;
+}
+//Taille texte NavBar
+#home-color, .navMenu {
+    font-size: 1.1em;
+}
 
 
+//Jumbotron
 .jumbotron-fluid,
 .container-fluid {
     padding: 0;
     margin: auto;
 }
-
-.dropdown {
-    list-style: none;
-    background: #fe4240;
-}
-
-.navMenu {
-    color: white;
-
-}
-
-.dropdown,
-.nav-link {
-    color: white;
-    text-decoration: none;
-}
-
-.dropdown .dropdown-menu a {
-    color: black;
-    text-decoration: none;
-}
-
-.dropdown .btn {
-    background: green;
-    color: #fff;
-}
-
-.dropdown .btn:hover {
-    background: cyan;
-    color: #000;
-}
-
-.dropdown .btn:active {
-    background: cyan;
-    color: #000;
-}
-
-.dropdown .btn:focus {
-    background: cyan;
-    color: #000;
-}
-
-.dropdown-menu .dropdown-item {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 5px;
-}
-
-.container .dropdown .dropdown-menu a:hover {
-    color: #fff;
-    background-color: #b91773;
-    border-color: #fff;
-}
-
+//NavBar bas carousel
 #navBas {
     background-color: #fe4240;
-    height: 40px;
+    height: 50px;
     #numberColor{
         color: white;
     }
 }
-.carousel-item:active {
+
+//Search bar haut droite
+#searchBar {
+    opacity: 0.5;
+    border-radius: 25px;
+    height: 30px;
+    width: 250px;
+    background-color: black;
+}
+//Intérieur search bar (texte)
+#searchBar::placeholder {
+    color: white;
+    opacity: 1;
+}
+//Icone search bar
+#searchButton {
+    border: none;
+    color: white;
+    position: relative;
+    right: 55px;
+    opacity: 0.5;
+}
+
+
+//titre 'Latest Movie Online'
+#carouselTitre {
+    bottom: 150px;
+    text-shadow: 0px 0px 5px rgba(black, 1);
+}
+//partie 'Latest'
+#latestText {
+    font-size: 3em;
+    font-weight: 600;
+}
+//Partie en rouge de 'Latest Movie Online'
+#onText, #moText {
+    font-size: 1.1em;
     color: #fe4240;
+}
+//texte accroche des films
+.textResumeCarousel {
+    padding-bottom: 100px;
+    text-shadow: 0px 0px 5px rgba(black, 1);
+    letter-spacing: 0.3em;
+}
+//filter affiche Jumbotron
+#afficheJumbotron {
+    filter: grayscale(30%);
+    filter: blur(1.5px);
+}
+//boutton 'regarder le trailer'
+#trailerButton {
+    margin-bottom: 35px;
     background-color: #fe4240;
+}
+
+//couleur indicateur page carousel inactif
+#carouselIndicators {
+    background-color: white;
+    opacity: 1;
+}
+//couleur indicateur page carousel actif
+#carouselIndicators.active {
+    background-color: #fe4240;
+}
+
+//Icone téléphone
+.fa-phone {
+    color: white;
+    transform: scaleX(-1);
+}
+//boutons login et register NavBar bas
+#loginButton, #registerButton {
+    margin-right: 5px;
+    background-color: black;
+    border-radius: 0px;
+    text-decoration: none;
+    border: none;
+    font-size: 13px;
 }
