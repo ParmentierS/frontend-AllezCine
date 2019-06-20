@@ -28,8 +28,68 @@ async function init()
 
     //setting 2 event listeners for yes and no button
     let clicked = false;
-    buttonNo.addEventListener("click",()=>
+    buttonNo.addEventListener("click",async ()=>
         {
+            //trolling mode activated
+            ageBox.style["display"]="none";
+            const sectionVideo = document.createElement("section");
+            sectionVideo.innerHTML="<iframe width=\"100%\" height=\"640\" src=\"https://www.youtube.com/embed/3xYXUeSmb-Y?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1\""
+            +" frameborder=\"0\" allow=\"accelerometer; autoplay=1; encrypted-media; gyroscope;" 
+            +" picture-in-picture\" allowfullscreen></iframe>"
+            document.body.append(sectionVideo);
+
+            //<iframe width="560" height="315" src="https://www.youtube.com/embed/3xYXUeSmb-Y" frameborder="0" 
+            //allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            /*const tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            const firstScriptTag = document.getElementsByTagName('script')[0];
+            await firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            await sleep(2000)
+            console.log(document.body.children);
+            function onYouTubeIframeAPIReady() 
+            {
+                const player = new YT.Player('ageBox',
+                {
+                    height: '360',
+                    width: '640',
+                    videoId: '3xYXUeSmb-Y',
+                    events: 
+                    {
+                        'onReady': onPlayerReady,
+                        'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+                        'onStateChange': onPlayerStateChange,
+                        'onError': onPlayerError
+                    }
+                });
+                document.body.append(player);
+                console.log(document.body.children);
+            }
+            function onPlayerReady(event) 
+            {
+                event.target.setVolume(100);
+                event.target.playVideo();
+            }
+        
+              // 5. The API calls this function when the player's state changes.
+              //    The function indicates that when playing a video (state=1),
+              //    the player should play for six seconds and then stop.
+            let done = false;
+            function onPlayerStateChange(event) 
+            {
+                if (event.data == YT.PlayerState.PLAYING && !done) 
+                {
+                    setTimeout(stopVideo, 8000);
+                    done = true;
+                }
+            }
+            function stopVideo() 
+            {
+                player.stopVideo();
+            }*/
+        
+            await sleep(10000);
+
             window.location.replace("https://www.imdb.com/");
             //testing to use it or not
             clicked=true;  
