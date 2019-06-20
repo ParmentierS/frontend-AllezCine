@@ -95,3 +95,11 @@
 #hamburgerNavBar {
   color: #fe4240;
 }
+
+.card-text {
+  text-align: center;
+}
+
+.card {
+  border: none;
+}
