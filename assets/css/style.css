@@ -1,3 +1,19 @@
+main #mainFavorite {
+  background-color: aqua;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main .row {
+  border-style: solid;
+  border-color: black;
+}
+
 #siteFooter {
   background-color: black;
 }
@@ -19,7 +35,9 @@
   text-align: center;
 }
 
-#siteFooter .motOneFooter, #siteFooter .motTwoFooter, #siteFooter .titleFooter {
+#siteFooter .motOneFooter,
+#siteFooter .motTwoFooter,
+#siteFooter .titleFooter {
   font-size: 1.1em;
 }
 

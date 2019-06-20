@@ -1,3 +1,21 @@
+// MAIN
+// CONTAINER
+main {
+    #mainFavorite {
+        background-color: aqua
+    }
+    img {
+        width: 100%;
+        height: auto;
+        align-content: center;
+    }
+    .row {
+        border-style:solid;
+        border-color:black;
+    }
+}
+
+
 // SHOP
 
 // CONTACT FORM
@@ -5,39 +23,51 @@
 // Footer
 #siteFooter {
     background-color: black;
+
     #btn-danger {
         border-radius: 0%;
     }
+
     #basic-addon2 {
-        background-color:#fe4240;
+        background-color: #fe4240;
         color: white;
         border: 0%;
         border-radius: 0%;
     }
+
     #subscribeFooter {
         color: #fe4240;
         font-size: 1.5em;
         text-align: center;
     }
-    .motOneFooter, .motTwoFooter, .titleFooter {
+
+    .motOneFooter,
+    .motTwoFooter,
+    .titleFooter {
         font-size: 1.1em;
     }
+
     .motOneFooter {
         color: #fe4240;
     }
-    .motTwoFooter{
+
+    .motTwoFooter {
         color: white;
     }
+
     .titleFooter {
         color: gray;
     }
+
     .listeFooter {
         font-size: 0.7em;
     }
 }
-#connectFooter{
+
+#connectFooter {
     text-align: center;
     align-content: center;
+
     p {
         font-size: 1.3em;
     }
