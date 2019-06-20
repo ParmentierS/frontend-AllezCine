@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // MAIN
 // CONTAINER
 main {
@@ -69,4 +70,112 @@ main {
     p {
         font-size: 1.3em;
     }
+=======
+body {
+    @font-face {
+        font-family: "A750";
+        src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
+    }
+}
+
+.titreNav {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+#titreAllez {
+    color: #fe4240;
+}
+
+#titreCine {
+    color: white;
+}
+
+#navHome {
+    color: #fe4240;
+}
+
+#titreJumbotron {
+    font-size: 45px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+.lettreJumbotron {
+    color: #fe4240;
+    font-size: 55px;
+}
+
+#texteJumbotron {
+    text-align: center;
+    color: white;
+    letter-spacing: 0.4em;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+#titreFilm {
+    font-style: italic;
+}
+
+#boutonTrailer {
+    background-color: #fe4240;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    border: none;
+}
+
+.jumbotron {
+    background-image: url('/assets/img/Jumbotron_550-Drive.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 350px;
+    border-radius: 0px;
+}
+
+#searchIcon {
+    color: white;
+    border: none;
+}
+
+#searchBar {
+    opacity: 0.5;
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    float: right;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+#catNav {
+    color: white;
+    opacity: 0.5;
+}
+
+#contactNav {
+    color: white;
+}
+
+#navBar {
+    background-color: #313131;
+}
+
+#hamburgerNavBar {
+    color: #fe4240;
+}
+
+//Featured Movies
+
+.card-text {
+    text-align: center;
+}
+
+.card {
+    border: none;
+>>>>>>> Ludovic
 }
