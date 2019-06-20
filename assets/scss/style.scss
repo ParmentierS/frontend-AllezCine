@@ -5,146 +5,93 @@ body {
     }
 }
 
-//couleur du titre 'AllezCine!' - Allez
-#allez-color {
-    color: #fe4240;
-}
-//couleur du titre 'AllezCine!' - Cine!
-#cine-color {
-    color: white;
-}
-//Titre ALLEZCINE!
-#cine-color,
-#allez-color {
-    font-size: 2.5em;
+.titreNav {
+    font-size: 35px;
     font-weight: 900;
 }
-//couleur du texte 'Home' sur la NavBar
-#home-color {
+
+#titreAllez {
     color: #fe4240;
 }
-// Couleur de 'genre', 'année', ... 
-.navMenu {
+
+#titreCine {
     color: white;
-    background-color: black;
-    opacity: 0.5;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 5px;
-    &:hover {
-        background-color: #fe4240;
-        opacity: 1;
-    }
-}
-.dropdown-toggle{
-    color: white;
-    opacity: 1;
-    &:hover {
-        color: white;
-    }
-}
-//Taille texte NavBar
-#home-color, .navMenu {
-    font-size: 1.1em;
 }
 
-
-//Jumbotron
-.jumbotron-fluid,
-.container-fluid {
-    padding: 0;
-    margin: auto;
+#navHome {
+    color: #fe4240;
 }
-//NavBar bas carousel
-#navBas {
+
+#titreJumbotron {
+    font-size: 45px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+.lettreJumbotron {
+    color: #fe4240;
+    font-size: 55px;
+}
+
+#texteJumbotron {
+    text-align: center;
+    color: white;
+    letter-spacing: 0.4em;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+#titreFilm {
+    font-style: italic;
+}
+
+#boutonTrailer {
     background-color: #fe4240;
-    height: 50px;
-    #numberColor{
-        color: white;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    border: none;
 }
 
-//Search bar haut droite
+.jumbotron {
+    background-image: url('/assets/img/Jumbotron_550-Drive.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 350px;
+    border-radius: 0px;
+}
+
+#searchIcon {
+    color: white;
+    border: none;
+}
+
 #searchBar {
     opacity: 0.5;
-    border-radius: 25px;
-    height: 30px;
-    width: 250px;
-    background-color: black;
-}
-//Intérieur search bar (texte)
-#searchBar::placeholder {
     color: white;
-    opacity: 1;
+    background-color: transparent;
+    border-color: white;
+    float: right;
+    padding-right: 150px;
+    border-radius: 50px;
 }
-//Icone search bar
-#searchButton {
-    border: none;
+
+#catNav {
     color: white;
-    position: relative;
-    right: 55px;
     opacity: 0.5;
-    &:hover{
-        background: transparent;
-    }//AJOUTER JS POUR FAIRE DISPARAITRE CADRE VERT
-} 
-
-
-//titre 'Latest Movie Online'
-#carouselTitre {
-    bottom: 150px;
-    text-shadow: 0px 0px 5px rgba(black, 1);
-}
-//partie 'Latest'
-#latestText {
-    font-size: 3em;
-    font-weight: 600;
-}
-//Partie en rouge de 'Latest Movie Online'
-#onText, #moText {
-    font-size: 1.1em;
-    color: #fe4240;
-}
-//texte accroche des films
-.textResumeCarousel {
-    padding-bottom: 100px;
-    text-shadow: 0px 0px 5px rgba(black, 1);
-    letter-spacing: 0.3em;
-}
-//filter affiche Jumbotron
-#afficheJumbotron {
-    filter: grayscale(30%);
-    filter: blur(1.5px);
-}
-//boutton 'regarder le trailer'
-#trailerButton {
-    margin-bottom: 35px;
-    background-color: #fe4240;
 }
 
-//couleur indicateur page carousel inactif
-#carouselIndicators {
-    background-color: white;
-    opacity: 1;
-}
-//couleur indicateur page carousel actif
-#carouselIndicators.active {
-    background-color: #fe4240;
-}
-
-//Icone téléphone
-.fa-phone {
+#contactNav {
     color: white;
-    transform: scaleX(-1);
 }
-//boutons login et register NavBar bas
-#loginButton, #registerButton {
-    margin-right: 5px;
-    background-color: black;
-    border-radius: 0px;
-    text-decoration: none;
-    border: none;
-    font-size: 13px;
+
+#navBar {
+    background-color: #313131;
+}
+
+#hamburgerNavBar {
+    color: #fe4240;
 }
