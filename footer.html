@@ -20,18 +20,56 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-    <!--Font Awesome-->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Accueil</title>
 </head>
 
 <body>
-    <!--Contact US-->
-    <div class="container">
+
+    <!-- MAIN-FAVORITE -->
+    <main>
+        <div class="container" id="mainFavorite">
+            <div class="row">
+                <div class="col-2 mt-4">
+                    <img src="assets/img/Survivestyle5-2004-comedie.jpg" alt="" id="favoriteMovie">
+                </div>
+                <div class="col-2 mt-4">
+                    <img src="assets/img/Survivestyle5-2004-comedie.jpg" alt="">
+                </div>
+                <div class="col-2 mt-4">
+                    <img src="assets/img/Survivestyle5-2004-comedie.jpg" alt="">
+                </div>
+                <div class="col-2 mt-4">
+                    <img src="assets/img/Survivestyle5-2004-comedie.jpg" alt="">
+                </div>
+                <div class="col-2 mt-4">
+                    <img src="assets/img/Survivestyle5-2004-comedie.jpg" alt="">
+                </div>
+                <div class="col-2 mt-4">
+                    <img src="assets/img/Survivestyle5-2004-comedie.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- CARD -->
+    <div class="container mt-4">
+
+        <h2>SHOP MOVIES</h2>
+
+        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+            <img src="assets/img/Card-Hostel.png" class="card-img-top" alt="Card of the movies Hostel">
+            <div class="card-body">
+                <h5 class="card-title">Hostel</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Contact US -->
+    <div class="container mt-4">
         <h2>CONTACT US</h2>
         <div class="row justify-content-center">
             <form class="card-formulaire bg-white">
@@ -62,19 +100,20 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col-lg-4">
-                            <button type="button" class="btn-contact"></i>SEND MESSAGE</button>
+                            <button type="button" class="btn btn-danger">SEND MESSAGE</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <!--Footer-->
+    <!-- Footer -->
     <footer>
+        <!-- FOOTER - SUBSCRIBE TO US -->
         <div class="jumbotron jumbotron-fluid" id="siteFooter">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-md-5 offset-md-3">
                         <p class="footerSubscribe" id="subscribeFooter">SUBSCRIBE TO US</p>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Enter your email..."
@@ -83,78 +122,148 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-2"><span class="titleFooter">RELEASE</span></div>
-                    <div class="col-2"><span class="titleFooter">MOVIES</span></div>
-                    <div class="col-2"><span class="titleFooter">REVIEW MOVIES</span></div>
-                    <div class="col-2"><span class="titleFooter">LATEST MOVIES</span></div>
-                    <div class="col-4"><span class="motOneFooter">ALLEZ</span><span class="motTwoFooter">CINE!</span>
+                <div class="row mt-4">
+                    <!-- FOOTER - RELEASE -->
+                    <div class="col-2">
+                        <span class="titleFooter">RELEASE</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col" id="listeFooter">
+                                            <p>2016</p>
+                                            <p>2015</p>
+                                            <p>2014</p>
+                                            <p>2013</p>
+                                            <p>2012</p>
+                                            <p>2011</p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- FOOTER - MOVIES -->
+                    <div class="col-2">
+                        <span class="titleFooter">MOVIES</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col" id="listeFooter">
+                                            <p>ADVENTURE</p>
+                                            <p>COMEDY</p>
+                                            <p>FANTASY</p>
+                                            <p>ACTION</p>
+                                            <p>MOVIES</p>
+                                            <p>HORROR</p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- FOOTER - REVIEW MOVIES -->
+                    </div>
+                    <div class="col-2">
+                        <span class="titleFooter">REVIEW MOVIES</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col" id="listeFooter">
+                                            <p>
+                                                <span class="badge badge-secondary">Comedy</span>
+                                                <span class="badge badge-secondary">Horror</span>
+                                                <span class="badge badge-secondary">Historical</span>
+                                                <span class="badge badge-secondary">Romantic</span>
+                                                <span class="badge badge-secondary">Love</span>
+                                                <span class="badge badge-secondary">Action</span>
+                                                <span class="badge badge-secondary">Reviews</span>
+                                                <span class="badge badge-secondary">Comedy</span>
+                                                <span class="badge badge-secondary">Horror</span>
+                                                <span class="badge badge-secondary">Historical</span>
+                                                <span class="badge badge-secondary">Romantic</span>
+                                                <span class="badge badge-secondary">Love</span>
+                                                <span class="badge badge-secondary">Comedy</span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- FOOTER - LATEST MOVIES -->
+                    <div class="col-3">
+                        <span class="titleFooter">LATEST MOVIES</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-8"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOOTER - ALLEZCINE! -->
+                    <div class="col-3">
+                        <span class="motOneFooter">ALLEZ</span>
+                        <span class="motTwoFooter">CINE!</span>
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <td scope="col">
+                                        </td>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="row">
+                                <img src="assets/img/Footer_poster-Inception.png" alt="">
+                                <img src="assets/img/Footer_poster-Hostel.png" alt="">
+                                <img src="assets/img/Footer_poster-Intouchables.png" alt="">
+                                <img src="assets/img/Footer_poster-Seven.png" alt="">
+                                <img src="assets/img/Footer_poster-Survive_style_5.png" alt="">
+                                <img src="assets/img/Footer_poster-LOTR.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-2">
-                        <table class="table">
+                <!-- FOOTER - SPACE BETWEEN -->
+                <div class="row lines">
+                    <div class="col-md-12">
+                        <table class="table release">
                             <thead>
                                 <tr>
-                                    <th scope="col">
-                                        <p>2016</p>
-                                        <p>2015</p>
-                                        <p>2014</p>
-                                        <p>2013</p>
-                                        <p>2012</p>
-                                        <p>2011</p>
-                                    </th>
+                                    <th></th>
                                 </tr>
                             </thead>
                         </table>
                     </div>
-                    <div class="col-2">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">
-                                        <p>ADVENTURE</p>
-                                        <p>COMEDY</p>
-                                        <p>FANTASY</p>
-                                        <p>ACTION</p>
-                                        <p>MOVIES</p>
-                                        <p>HORROR</p>
-                                    </th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="col-2">
-                        <tr>
-                            <span class="badge badge-secondary">Comedy</span>
-                            <span class="badge badge-secondary">Horror</span>
-                            <span class="badge badge-secondary">Historical</span>
-                            <span class="badge badge-secondary">Romantic</span>
-                            <span class="badge badge-secondary">Love</span>
-                            <span class="badge badge-secondary">Action</span>
-                            <span class="badge badge-secondary">Reviews</span>
-                            <span class="badge badge-secondary">Comedy</span>
-                            <span class="badge badge-secondary">Horror</span>
-                            <span class="badge badge-secondary">Historical</span>
-                            <span class="badge badge-secondary">Romantic</span>
-                            <span class="badge badge-secondary">Love</span>
-                            <span class="badge badge-secondary">Comedy</span>
-                        </tr>
-                    </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <!--Empty space-->
-                    </div>
-                </div>
-                <div class="row">
+                <!-- FOOTER - CONNECT US -->
+                <div class="row justify-content-center">
                     <div class="col" id="connectFooter">
                         <p>CONNECT US</p>
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-linkedin-in"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-google-plus-g"></i>
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/?lang=fr">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.google.com">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
                     </div>
                 </div>
             </div>
