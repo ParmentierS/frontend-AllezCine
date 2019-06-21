@@ -1,0 +1,12 @@
+.animation-network-container
+{
+    li 
+    {
+        transform : translateX(-5%);
+    }
+    li:hover
+    {
+        transform :  translateX(0);
+        transition : transform 0.25s;
+    }
+}
