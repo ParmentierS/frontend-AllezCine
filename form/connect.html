@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="connect.css">
+</head>
+<body>
+  <button class="trigger">Connexion</button>
+  <button class="trigger" >Register</button>
+  <div class="modal" id="myForm">
+    <div class="form-popup">
+      <form class="form-container">
+      <h1 class="connect">Connexion</h1>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Entrer une adresse email" name="email" required>
+      <label for="psw"><b>Mot de passe</b></label>
+      <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
+      <button type="submit" class="btn2">OK</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember">Rester connecté
+      </label>
+      <div class="place">
+      <button type="submit" class="btn3">Créer un compte</button>
+      <button type="button" class="closeb">Annuler</button>
+    </div>
+    <a href="#" id="forgot">Mot de passe oublié?</a>
+      </form>
+      </div>
+  </div>
+
+  <div class="modal" id="id01">
+    <div class="form-popup">
+      <form class="form-container">
+      <h1>Register</h1>
+      <label for="nom"><b>Nom</b></label>
+      <input type="text" placeholder="Entrer un nom" name="nom" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Entrer une adresse email" name="email" required>
+      <label for="psw"><b>Mot de passe</b></label>
+      <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
+      <label for="psw"><b>Confirmer</b></label>
+      <input type="password" placeholder="Confirmer un mot de passe" name="psw" required>
+      <div class="ok">
+      <input type="checkbox" checked="checked" name="remember">
+      <label class="account">En créant un compte, vous acceptez nos<a href="#" id="term"> termes et conditions</a>. 
+      </label>
+    </div>
+      <button type="button" class="btn1">Register</button>
+      <button type="button" class="close-button">Annuler</button>
+      </form>
+      </div>
+  </div>
+
+</body>
+<script src="connect.js"></script>
+</html>
