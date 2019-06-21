@@ -5,162 +5,165 @@
   }
 }
 
-#allez-color {
-  color: #fe4240;
+.w-100 {
+  width: 100% !important;
+  height: 440px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#cine-color {
-  color: white;
-}
-
-#cine-color,
-#allez-color {
-  font-size: 2.5em;
-  font-weight: 900;
-}
-
-#home-color {
-  color: #fe4240;
-}
-
-.navMenu {
-  color: white;
-  background-color: black;
-  opacity: 0.5;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  border-radius: 5px;
-}
-
-.navMenu:hover {
-  background-color: #fe4240;
-  opacity: 1;
-}
-
-.dropdown-toggle {
-  color: white;
-  opacity: 1;
-}
-
-.dropdown-toggle:hover {
-  color: white;
-}
-
-#home-color, .navMenu {
-  font-size: 1.1em;
-}
-
-.jumbotron-fluid,
-.container-fluid {
-  padding: 0;
-  margin: auto;
-}
-
-#navBas {
-  background-color: #fe4240;
-  height: 50px;
-}
-
-#navBas #numberColor {
-  color: white;
-}
-
-#searchBar {
-  opacity: 0.5;
-  border-radius: 25px;
-  height: 30px;
-  width: 250px;
-  background-color: black;
-}
-
-#searchBar::-webkit-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-#searchBar:-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-#searchBar::-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-}
-
-#searchBar::placeholder {
-  color: white;
-  opacity: 1;
-}
-
-#searchButton {
+.navBar {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: none;
   border: none;
-  color: white;
-  position: relative;
-  right: 55px;
-  opacity: 0.5;
+  border-radius: none;
 }
 
-#searchButton:hover {
-  background: transparent;
+.navBar .navbar-nav a {
+  color: white !important;
+  font-size: 20px;
 }
 
-#carouselTitre {
-  bottom: 150px;
-  text-shadow: 0px 0px 5px black;
+.navBar .navbar-nav .dropdown-menu a {
+  color: black !important;
 }
 
-#latestText {
-  font-size: 3em;
-  font-weight: 600;
+.navbar-brand {
+  color: white !important;
+  font-size: 45px;
+  font-weight: 900;
+  text-shadow: 4px 4px 2px black;
 }
 
-#onText, #moText {
-  font-size: 1.1em;
+.my-carousel {
+  top: 0;
+}
+
+.titreAllez {
   color: #fe4240;
 }
 
-.textResumeCarousel {
-  padding-bottom: 100px;
-  text-shadow: 0px 0px 5px black;
-  letter-spacing: 0.3em;
+.titreHome {
+  color: #fe4240;
+  font-size: 20px;
 }
 
-#afficheJumbotron {
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
-  -webkit-filter: blur(1.5px);
-          filter: blur(1.5px);
+/* /!\ SEARCHBAR /!\ */
+.searchbar {
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 30px;
+  background-color: #fe4240;
+  border-radius: 30px;
+  padding: 10px;
+  opacity: 0.8;
 }
 
-#trailerButton {
-  margin-bottom: 35px;
+.search_input {
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  -webkit-transition: width 0.4s linear;
+  -o-transition: width 0.4s linear;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input {
+  padding: -30px 10px;
+  width: 250px;
+  caret-color: white;
+  -webkit-transition: width 0.4s linear;
+  -o-transition: width 0.4s linear;
+  transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon {
+  color: white;
+}
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  padding-bottom: 30px;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+
+.link-nav {
+  list-style: none;
+}
+
+.titreLink {
+  color: white;
+  font-size: 20px;
+}
+
+.titreLMO {
+  font-size: 45px;
+  font-weight: 700;
+  text-shadow: 4px 4px 2px black;
+}
+
+.lettreLMO {
+  color: #fe4240;
+  font-size: 55px;
+}
+
+.descriptifFilm {
+  padding-bottom: 50px;
+  letter-spacing: 0.6em;
+  text-shadow: 4px 4px 2px black;
+}
+
+.logoTrailer {
+  background-color: #fe4240;
+  width: 150px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-weight: bold;
+}
+
+.bottomNav {
   background-color: #fe4240;
 }
 
-#carouselIndicators {
-  background-color: white;
-  opacity: 1;
-}
-
-#carouselIndicators.active {
-  background-color: #fe4240;
+.loginNav {
+  background-color: black;
 }
 
 .fa-phone {
   color: white;
-  -webkit-transform: scaleX(-1);
-      -ms-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
-#loginButton, #registerButton {
-  margin-right: 5px;
+.phoneNav {
+  color: white;
+}
+
+.black-button {
   background-color: black;
-  border-radius: 0px;
-  text-decoration: none;
   border: none;
-  font-size: 13px;
+  margin: 5px;
 }
