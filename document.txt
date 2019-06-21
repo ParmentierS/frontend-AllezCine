@@ -5,7 +5,7 @@
 - en-tête jumbotron : slide - Ludo
 - boutons réseaux sociaux : html/css (animation)
 - section films : modal (bootstrap)
-- site en responsive : css
+- site en responsive : css mediaqueries/bootstrap classes (au choix)
 - pop-up entrée : contrainte de l'âge (pop-up) : js : seb
 - box : cookies : js - maud
 - box : formulaires connexion avec boutons login et register : js - maud
