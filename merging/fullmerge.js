@@ -10,10 +10,10 @@ console.log (body.scrollHeight, body.offsetHeight,
 console.log("height of document",DOCUMENT_HEIGHT)
 console.log(footerElement.offsetTop);
 
-
 let topButtonAlreadyVisible=false;
-let downButtonAlreadyVisible=false;
-let performingAnimation=false;
+let downButtonAlreadyVisible=true;
+let performingAnimationTop=false;
+let performingAnimationBottom=false;
 
 
 //fonction qui prend un certain nombre de millisecondes à s'exécuter
@@ -173,20 +173,34 @@ window.addEventListener("scroll",scrollFunctionPlanner);
 
 async function scrollFunctionPlanner(event)
 {
-    if(performingAnimation)
+    let lastScrollPosition=event.pageY;
+    if(performingAnimationTop && performingAnimationBottom)
     {
-        console.log("we are doing an animation => event rejected",event.pageY);
+        
+        console.log("we are doing both animation => event rejected",event.pageY);
         return "";
     }
-    performingAnimation=true;
-    await  scrollFunction(event);//guarantee that there is only one scroll event that can access the button at the same time
-    performingAnimation=false;
+    if(!performingAnimationTop)
+    {
+        console.log("animation 1")
+        performingAnimationTop=true;
+        await  animationTopButton(event);//guarantee that there is only one scroll event that can access the button at the same time
+        performingAnimationTop=false;
+    }
+    if(!performingAnimationBottom)
+    {
+        console.log("animation 2")
+        performingAnimationBottom=true;
+        await  animationBottomButton(event);//guarantee that there is only one scroll event that can access the button at the same time
+        performingAnimationBottom=false;
+    }
     
 }
 
 
-async function scrollFunction(event) {
-
+async function animationTopButton(event) 
+{
+    //console.log("animation haute")
     let lastScrollPosition=event.pageY;
 
     //could be improved to switch between appearing and disappearing dynamically
@@ -201,10 +215,11 @@ async function scrollFunction(event) {
             }
             await sleep(50);
         }
-        //console.log("testaudessusde601",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimation);
+        //console.log("testaudessusde601",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
         topButtonAlreadyVisible=true;
     
     } 
+    
     else if(lastScrollPosition<=600 && topButtonAlreadyVisible)
     {
         for(let opacity=1;opacity>=0;opacity-=0.1)
@@ -215,13 +230,18 @@ async function scrollFunction(event) {
             }
             await sleep(50);
         }
-        //console.log("testendessousde599",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimation);
+        //console.log("testendessousde599",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
         topButtonAlreadyVisible=false;
     }
     else{
-        //console.log("else",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimation);
+        //console.log("else",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
 
-    }
+    }    
+}
+async function animationBottomButton(event) 
+{
+    //console.log("animation basse")
+    let lastScrollPosition=event.pageY;
     if (lastScrollPosition <= DOCUMENT_HEIGHT-600 && !downButtonAlreadyVisible) 
     {
         for(let opacity=0;opacity<=1;opacity+=0.1)
@@ -232,8 +252,9 @@ async function scrollFunction(event) {
             }
             await sleep(50);
         }
-         downButtonAlreadyVisible=true;
-    
+        downButtonAlreadyVisible=true;
+        //console.log("apparition",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationBottom);
+
     } 
     else if(lastScrollPosition > DOCUMENT_HEIGHT-600 && downButtonAlreadyVisible)
     {
@@ -246,11 +267,14 @@ async function scrollFunction(event) {
             await sleep(50);
         }
         downButtonAlreadyVisible=false;
+        //console.log("disparition",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationBottom);
+
     }
+    else{
+        //console.log("else",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationBottom);
 
-    
+    }  
 }
-
 
 
 
