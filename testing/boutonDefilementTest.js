@@ -1,4 +1,4 @@
-const shopMoviesList=document.getElementById("shop-movies").children
+const shopMoviesList=document.getElementById("shopmovieslist").getElementsByClassName("col-md-3");
 const numberOfSlides=Math.ceil(shopMoviesList.length / 4); // 40 -> 10 slides , 41 -> 11 slides
 let currentSlide = 1;//normal numerotation first slide : 1, second slide : 2
 console.log(shopMoviesList.length, numberOfSlides, currentSlide);
