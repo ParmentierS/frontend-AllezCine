@@ -40,6 +40,7 @@
 </head>
 
 <body>
+    <!--
     <div class="modal2 ageBox" id="ageBox">
         <div class="modal-content">
             <h1 class="titre">Avez vous plus de 18 ans ?</h1>
@@ -49,7 +50,8 @@
         <button class="myBtn refuse no">Non</button>
         </div>
     </div>
-    <div class="modal2 cookieBox">
+    -->
+    <!--<div class="modal2 cookieBox">
         <div class="modal-content">
             <h1 class="titre">Cookie and privacy</h1>
             <p>This website uses cookies to ensure you the best experience on our website.</p>
@@ -57,6 +59,7 @@
             <button class="myBtn accept">Accept</button>
         </div>
     </div>
+    -->
     <header>
         <!--NAVBAR-->
         <nav class="navBar navbar navbar-expand-lg navbar-custom bg-custom">
@@ -298,29 +301,86 @@
                         <a class="nav-link active" href="#">Tous</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Action</a>
+                        <button class="nav-link filter" id="action">Action</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Comédies</a>
+                        <button class="nav-link filter" id="scifi">Sci-fi</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Historiques</a>
+                        <button class="nav-link filter" id="comedie">Comedie</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Horreurs</a>
+                        <button class="nav-link filter" id="thriller">Thriller</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Romantiques</a>
+                        <button class="nav-link filter" id="dramatique">Dramatique</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Amour</a>
+                        <button class="nav-link filter" id="aventure">Aventure</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2001">2001</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2002">2002</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2003">2003</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2004">2004</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2005">2005</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2006">2006</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2007">2007</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2008">2008</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2009">2009</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2010">2010</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2011">2011</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2012">2012</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2013">2013</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2014">2014</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2015">2015</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2016">2016</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2017">2017</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" id="2018">2018</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link filter" href=""id="2019">2019</button>
                     </li>
                 </ul>
             </div>
         </div>
         <!--FIN-FAVORITE_SERIES-->
         <!--LISTING-FAVORITE_SERIES-->
-        <div class="container-fluid">
+        <div class="container-fluid" id="featured-movies">
             <div class="row">
                 <div class="col-md-12">
                     <!--PREMIERE LIGNE-->
@@ -407,9 +467,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--Deuxième ligne-->
-                    <div class="row">
+                    
+                    <!--Deuxième ligne // pas besoin de faire une autre rangée -->
+                    
                         <div class="col-md-2">
                             <div class="card-group">
                                 <div id="trailer" class="card text-center">
@@ -496,7 +556,8 @@
                     </div>
                 </div>
                 <!--BOUTON-VOIR_PLUS-->
-                <button type="button" class="btn btn-danger">Plus de films</button>
+                <button type="button" class="btn btn-danger" id="plusDeFilms">Plus de Films</button>
+                <button type="button" class="btn btn-danger" id="moinsDeFilms">Moins de films</button>
 
                 <!--FIN_LISTING-FAVORITE_SERIES-->
             </div>

@@ -20,7 +20,7 @@ function display(element, counter)
 {
     console.log(counter + " [==>")
     console.log(element);
-    for(child of element.children)
+    for(let child of element.children)
     {
         display(child,counter+1);
     }
@@ -43,7 +43,7 @@ async function ageRestrictionBox()
     //everything should disappear
     const bodyChildren = body.children;
     console.table(bodyChildren);
-    for(child of bodyChildren)
+    for(let child of bodyChildren)
     {
         child.style["display"]="none";
     }
@@ -92,7 +92,7 @@ async function ageRestrictionBox()
         await sleep(1000);
     }
     //everything reappear
-    for(child of bodyChildren)
+    for(let child of bodyChildren)
     {
         child.style["display"]="";
     }   
@@ -277,11 +277,11 @@ async function initArrowButtons()
 
     topButtons = document.getElementsByClassName("scroll-button-top");
     downButtons = document.getElementsByClassName("scroll-button-bottom");
-    for (button of topButtons)
+    for (let button of topButtons)
     {
         button.style.opacity = 0;
     }
-    for (button of downButtons)
+    for (let button of downButtons)
     {
         button.style.opacity = 1;
     }
@@ -295,19 +295,19 @@ async function scrollFunctionPlanner(event)
     if(performingAnimationTop && performingAnimationBottom)
     {
         
-        console.log("we are doing both animation => event rejected",event.pageY);
+        //console.log("we are doing both animation => event rejected",event.pageY);
         return "";
     }
     if(!performingAnimationTop)
     {
-        console.log("animation 1")
+        //console.log("animation 1")
         performingAnimationTop=true;
         await  animationTopButton(event);//guarantee that there is only one scroll event that can access the button at the same time
         performingAnimationTop=false;
     }
     if(!performingAnimationBottom)
     {
-        console.log("animation 2")
+        //console.log("animation 2")
         performingAnimationBottom=true;
         await  animationBottomButton(event);//guarantee that there is only one scroll event that can access the button at the same time
         performingAnimationBottom=false;
@@ -327,7 +327,7 @@ async function animationTopButton(event)
     {
         for(let opacity=0;opacity<=1;opacity+=0.1)
         {
-            for (button of topButtons)
+            for (let button of topButtons)
             {
                 button.style.opacity = opacity;
             }
@@ -342,7 +342,7 @@ async function animationTopButton(event)
     {
         for(let opacity=1;opacity>=0;opacity-=0.1)
         {
-            for (button of topButtons)
+            for (let button of topButtons)
             {
                 button.style.opacity = opacity;
             }
@@ -364,7 +364,7 @@ async function animationBottomButton(event)
     {
         for(let opacity=0;opacity<=1;opacity+=0.1)
         {
-            for (button of downButtons)
+            for (let button of downButtons)
             {
                 button.style.opacity = opacity;
             }
@@ -378,7 +378,7 @@ async function animationBottomButton(event)
     {
         for(let opacity=1;opacity>=0;opacity-=0.1)
         {
-            for (button of downButtons)
+            for (let button of downButtons)
             {
                 button.style.opacity = opacity;
             }
@@ -395,19 +395,19 @@ async function animationBottomButton(event)
 }
 
 // 4) MORE MOVIES LESS MOVIES FILTER BUTTON : SEBASTIEN
-const movieClassName = "col-3"
+const movieClassName = "col-md-2"
 const showingNumber=3;
 
 function show(listOfMovies)
 {
-    for(movie of listOfMovies)
+    for(let movie of listOfMovies)
     {
         movie.style["display"]="";
     }
 }
 function hide(listOfMovies)
 {
-    for(movie of listOfMovies)
+    for(let movie of listOfMovies)
     {
         movie.style["display"]="none";
     }
@@ -491,7 +491,7 @@ async function activateFilterButtons()
 
 
     const filterButtonTable=document.getElementsByClassName("filter")
-    for (button of filterButtonTable)
+    for (let button of filterButtonTable)
     {
         button.addEventListener("click", (event)=>{
 
@@ -504,6 +504,8 @@ async function activateFilterButtons()
                 show(featuredMoviesList);
                 hide(undisplayedMoviesList);
                 show(displayedMoviesList)
+                button.classList.remove("active");
+                console.log(button);
             }
             else
             {
@@ -517,6 +519,8 @@ async function activateFilterButtons()
                 hide(undisplayedMoviesList);
                 show(displayedMoviesList)
                 console.log("filterone", filteredMoviesList,"filterreverse", restOfMovies)
+                button.classList.add("active");
+                console.log(button);
                 
             }
             
@@ -575,7 +579,7 @@ async function activateShopMoviesButton()
 
     function hideEverySlide()
     {
-        for(movie of shopMoviesList)
+        for(let movie of shopMoviesList)
         {
             movie.style["display"]="none";
         }
@@ -666,14 +670,14 @@ async function activateShopMoviesButton()
 //7) LAUNCH EVERYTHING ONE BY ONE
 async function main()
 {
-    display(body,0);
-    await ageRestrictionBox();
+    //display(body,0);
+    //await ageRestrictionBox();
     console.log("Demande de l'age terminée \o/")
-    await cookieBox()
+    //await cookieBox()
     console.log("Cookie box chargée \o/")
     await initArrowButtons()
     console.log("Boutons de défilement chargés \o/")
-    //await activateFilterButtons();
+    await activateFilterButtons();
     console.log("Filtres activés \o/")
     await activateFormsButtons();
     console.log("Formulaires chargés \o/")
