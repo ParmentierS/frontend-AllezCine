@@ -1,20 +1,8 @@
-const TOP = true;
-const BOTTOM = false;
+//0) UTILITY FUNCTIONS and global variables
+
 const body = document.body;
-const html = document.documentElement;
 const footerElement = document.getElementsByTagName("footer")[0];
 const headerElement = document.getElementsByTagName("header")[0];
-const DOCUMENT_HEIGHT = footerElement.offsetTop;
-console.log (body.scrollHeight, body.offsetHeight, 
-    html.clientHeight, html.scrollHeight, html.offsetHeight)
-console.log("height of document",DOCUMENT_HEIGHT)
-console.log(footerElement.offsetTop);
-
-let topButtonAlreadyVisible=false;
-let downButtonAlreadyVisible=true;
-let performingAnimationTop=false;
-let performingAnimationBottom=false;
-
 
 //fonction qui prend un certain nombre de millisecondes à s'exécuter
 // prend comme paramètre le nombre de milisecondes que la fonction doit attendre avant de se terminer
@@ -27,6 +15,134 @@ function sleep(ms)
 {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+
+//1) AGE RESTRICTION BOX : SEBASTIEN
+
+async function ageRestrictionBox()
+{
+    //body hiding
+    body.style["opacity"]=0;
+
+    //getting dom elements
+    const ageBox = document.getElementById("ageBox");
+    const buttonYes = document.getElementsByClassName("yes")[0];
+    const buttonNo = document.getElementsByClassName("no")[0];
+
+    //everything should disappear
+    const bodyChildren = body.children;
+    console.table(bodyChildren);
+    for(child of bodyChildren)
+    {
+        child.style["display"]="none";
+    }
+    ageBox.style["display"]="";
+
+
+    //showing body again
+    body.style["opacity"]=1;
+    //and ageBox appear
+    
+    console.log(body,ageBox,buttonYes,buttonNo,bodyChildren);
+    console.table(body.innerHTML);
+    console.table(bodyChildren);
+
+    //setting 2 event listeners for yes and no button
+    let clicked = false;
+    buttonNo.addEventListener("click",
+        async ()=>
+        {
+            //trolling mode activated
+            ageBox.style["display"]="none";
+            const sectionVideo = document.createElement("section");
+            sectionVideo.innerHTML="<iframe width=\"100%\" height=\"640\" src=\"https://www.youtube.com/embed/3xYXUeSmb-Y?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1\""
+            +" frameborder=\"0\" allow=\"accelerometer; autoplay=1; encrypted-media; gyroscope;" 
+            +" picture-in-picture\" allowfullscreen></iframe>"
+            document.body.append(sectionVideo);
+   
+            await sleep(10000);
+
+            //with replace we don't keep the previous page in history
+            window.location.replace("https://www.imdb.com/");
+            clicked=true;  //the while loop can end now
+            document.body.style["display"]="none";
+        }
+    )
+    buttonYes.addEventListener("click",
+        ()=>
+        {
+            ageBox.style["display"]="none";
+            clicked=true;
+        }
+    )
+    //waiting for clicking event
+    while(!clicked)
+    {
+        await sleep(1000);
+    }
+    //everything reappear
+    for(child of bodyChildren)
+    {
+        child.style["display"]="";
+    }   
+}
+
+
+
+
+
+
+//2) COOKIE BOX : MAUD
+
+async function cookieBox()
+{
+    /*very old maud code*/
+    //should replace all of it with actual maud code
+
+    let modal = document.querySelectorAll(".modal2")[1];
+    console.log(modal);
+    let btn = document.querySelectorAll(".myBtn");
+    let btn1 = btn[2];
+    let btn2 = btn[3];
+    console.log(btn1);
+    console.log(btn2);
+
+
+    toggleModal();
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    btn1.addEventListener('click', () => {
+        modal.classList.toggle("hide-modal");
+        console.log("1",modal.classList, modal)
+
+    })
+
+    btn2.addEventListener('click', () => {
+        modal.classList.toggle("hide-modal");
+        console.log("2",modal.classList, modal)
+
+    })
+}
+
+//3) SCROLL BUTTONS
+
+const TOP = true;
+const BOTTOM = false;
+const html = document.documentElement;
+const DOCUMENT_HEIGHT = footerElement.offsetTop;
+console.log (body.scrollHeight, body.offsetHeight, 
+    html.clientHeight, html.scrollHeight, html.offsetHeight)
+console.log("height of document",DOCUMENT_HEIGHT)
+
+let topButtons = null;
+let downButtons = null;
+let topButtonAlreadyVisible=false;
+let downButtonAlreadyVisible=true;
+let performingAnimationTop=false;
+let performingAnimationBottom=false;
 
 
 //create a scroll button in fixed position to the top if boolean parameter up is true
@@ -129,7 +245,7 @@ function includeButtonInFooter()
 
 
 //create one scroll to top button and one scroll to bottom button on the right of the window
-function initArrowButtons()
+async function initArrowButtons()
 {
     console.log(body)
     createScrollButton(TOP, "0px","45%","<i class=\"fas fa-arrow-alt-circle-up\"></i>"
@@ -139,41 +255,32 @@ function initArrowButtons()
     +"<i class=\"fas fa-arrow-circle-down\"></i>"
     +"<i class=\"fas fa-arrow-circle-down\"></i>")
     console.log(body)
+        if (includeButtonInFooter())
+    {
+        console.log("bouton inclus dans le footer");
+    }
+    else
+    {
+        console.log("inclusion du bouton dans le footer non réussie")
+    }
+
+    topButtons = document.getElementsByClassName("scroll-button-top");
+    downButtons = document.getElementsByClassName("scroll-button-bottom");
+    for (button of topButtons)
+    {
+        button.style.opacity = 0;
+    }
+    for (button of downButtons)
+    {
+        button.style.opacity = 1;
+    }
+
+    window.addEventListener("scroll",scrollFunctionPlanner);
 }
 
-
-
-initArrowButtons()
-if (includeButtonInFooter())
-{
-    console.log("bouton inclus dans le footer");
-}
-else
-{
-    console.log("inclusion du bouton dans le footer non réussie")
-}
-
-
-
-
-const topButtons = document.getElementsByClassName("scroll-button-top");
-const downButtons = document.getElementsByClassName("scroll-button-bottom");
-for (button of topButtons)
-{
-    button.style.opacity = 0;
-}
-for (button of downButtons)
-{
-    button.style.opacity = 1;
-}
-
-
-
-window.addEventListener("scroll",scrollFunctionPlanner);
 
 async function scrollFunctionPlanner(event)
 {
-    let lastScrollPosition=event.pageY;
     if(performingAnimationTop && performingAnimationBottom)
     {
         
@@ -276,6 +383,39 @@ async function animationBottomButton(event)
     }  
 }
 
+// 4) MORE MOVIES LESS MOVIES FILTER BUTTON : SEBASTIEN
+const movieClassName = "col-3"
+const showingNumber=3;
 
+async function activateFilterButtons()
+{
 
+}
 
+// 5) CONTACT US LOG IN REGISTER FORMS : MAUD
+async function activateFormsButtons()
+{
+    //Here goes Maud code
+} 
+
+//6) LAUNCH EVERYTHING ONE BY ONE
+async function main()
+{
+    await ageRestrictionBox();
+    console.log("Demande de l'age terminée \o/")
+    await cookieBox()
+    console.log("Cookie box chargée \o/")
+    await initArrowButtons()
+    console.log("Boutons de défilement chargés \o/")
+    await activateFilterButtons();
+    console.log("Filtres activés \o/")
+    await activateFormsButtons();
+    console.log("Formulaires chargés \o/")
+    console.log("Site chargé, installez vous confortablement")
+}
+main();
+
+/*
+    - Copyright -
+    Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
+*/
