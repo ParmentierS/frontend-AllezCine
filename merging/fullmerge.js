@@ -19,11 +19,13 @@ function sleep(ms)
 function display(element, counter)
 {
     console.log(counter + " [==>")
+    console.log(element.localName,element.className,element.id)
     console.log(element);
     for(let child of element.children)
     {
         display(child,counter+1);
     }
+    console.log(element.localName,element.className,element.id)
     console.log("<==] " + counter)
 }
 
@@ -357,7 +359,8 @@ async function animationTopButton(event)
         {
             for (let button of topButtons)
             {
-                button.style.opacity = opacity;
+                console.log(opacity);
+                button.style.opacity = opacity.toFixed(1);
             }
             await sleep(50);
         }
@@ -372,7 +375,8 @@ async function animationTopButton(event)
         {
             for (let button of topButtons)
             {
-                button.style.opacity = opacity;
+                console.log(opacity);
+                button.style.opacity = opacity.toFixed(1);
             }
             await sleep(50);
         }
@@ -395,7 +399,7 @@ async function animationBottomButton(event)
         {
             for (let button of downButtons)
             {
-                button.style.opacity = opacity;
+                button.style.opacity = opacity.toFixed(1);
             }
             await sleep(50);
         }
@@ -409,7 +413,7 @@ async function animationBottomButton(event)
         {
             for (let button of downButtons)
             {
-                button.style.opacity = opacity;
+                button.style.opacity = opacity.toFixed(1);
             }
             await sleep(50);
         }
@@ -426,7 +430,7 @@ async function animationBottomButton(event)
 // 4) MORE MOVIES LESS MOVIES FILTER BUTTON : SEBASTIEN
 
 const movieClassName = "col-md-2"
-const showingNumber=3;
+const showingNumber=6;
 
 //remove the CSS property display:"none"; from the CSS properties of each movie of the list
 function show(listOfMovies)
