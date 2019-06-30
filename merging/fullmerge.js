@@ -143,10 +143,31 @@ async function cookieBox()
 const TOP = true;
 const BOTTOM = false;
 const html = document.documentElement;
-const DOCUMENT_HEIGHT = footerElement.offsetTop;
+
+//strangely it doesn't work here /o/
+/*const WINDOW_HEIGHT = window.innerHeight || (document.documentElement || document.body).clientHeight
+const DOCUMENT_HEIGHT = getDocHeight();
+
+function getDocHeight() 
+{
+    return Math.max(
+        body.scrollHeight, html.scrollHeight,
+        body.offsetHeight, html.offsetHeight,
+        body.clientHeight, html.clientHeight
+    )
+}
+REAL_HEIGHT = DOCUMENT_HEIGHT - WINDOW_HEIGHT;*/
+
+//so we cheat /o/
+footerElement.scrollIntoView();
+REAL_HEIGHT= html.scrollTop;
+body.scrollTop=0; // For Safari
+html.scrollTop=0; // For Chrome, Firefox, IE and Opera
+
+
 console.log (body.scrollHeight, body.offsetHeight, 
     html.clientHeight, html.scrollHeight, html.offsetHeight)
-console.log("height of document",DOCUMENT_HEIGHT)
+console.log("height of document",REAL_HEIGHT)
 
 let topButtons = null;
 let downButtons = null;
@@ -189,8 +210,8 @@ function createScrollButton(up,positionX, positionY,iconText)
         button.addEventListener("click", (event)=>
         { 
             // scroll very far to the bottom of the webpage
-            body.scrollTop=DOCUMENT_HEIGHT; // For Safari
-            html.scrollTop=DOCUMENT_HEIGHT; // For Chrome, Firefox, IE and Opera
+            body.scrollTop=REAL_HEIGHT; // For Safari
+            html.scrollTop=REAL_HEIGHT; // For Chrome, Firefox, IE and Opera
             //scroll to the footer of the page
             //footerElement.scrollIntoView();
         })
@@ -277,11 +298,11 @@ async function initArrowButtons()
 
     topButtons = document.getElementsByClassName("scroll-button-top");
     downButtons = document.getElementsByClassName("scroll-button-bottom");
-    for (let button of topButtons)
+    for(let button of topButtons)
     {
         button.style.opacity = 0;
     }
-    for (let button of downButtons)
+    for(let button of downButtons)
     {
         button.style.opacity = 1;
     }
@@ -292,36 +313,42 @@ async function initArrowButtons()
 
 async function scrollFunctionPlanner(event)
 {
+    // explanation in french of the concept of atomicity (the reason why I'm doing this)
+    // https://fr.wikipedia.org/wiki/Atomicit%C3%A9_(informatique)
+    // performing the animation of a button should be atomic
+    // two scrolling events should not be performing the animation of the same button at the same time
+    // errors could occur in that situation
+    // also the animation should not stop in the middle 
+    // (irreducible and indivisble animation)
+
     if(performingAnimationTop && performingAnimationBottom)
     {
-        
-        //console.log("we are doing both animation => event rejected",event.pageY);
+        console.log("we are doing both animation => event rejected",event.pageY);
         return "";
     }
     if(!performingAnimationTop)
     {
-        //console.log("animation 1")
-        performingAnimationTop=true;
-        await  animationTopButton(event);//guarantee that there is only one scroll event that can access the button at the same time
-        performingAnimationTop=false;
+        //guarantee that there is only one scroll event that can access the opacity of that button at the same time
+        performingAnimationTop=true; //forbid access to ressource
+        await  animationTopButton(event);
+        performingAnimationTop=false; //autorize access to ressource
     }
     if(!performingAnimationBottom)
     {
-        //console.log("animation 2")
-        performingAnimationBottom=true;
-        await  animationBottomButton(event);//guarantee that there is only one scroll event that can access the button at the same time
-        performingAnimationBottom=false;
+        //guarantee that there is only one scroll event that can access the opacity of that button at the same time
+        performingAnimationBottom=true; //forbid access to ressource
+        await  animationBottomButton(event);
+        performingAnimationBottom=false; //autorize access to ressource
     }
-    
+
 }
 
+//could be improved to switch between appearing and disappearing dynamically 
 
 async function animationTopButton(event) 
 {
     //console.log("animation haute")
     let lastScrollPosition=event.pageY;
-
-    //could be improved to switch between appearing and disappearing dynamically
     
     if (lastScrollPosition>600 && !topButtonAlreadyVisible) 
     {
@@ -351,7 +378,8 @@ async function animationTopButton(event)
         //console.log("testendessousde599",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
         topButtonAlreadyVisible=false;
     }
-    else{
+    else
+    {
         //console.log("else",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
 
     }    
@@ -360,7 +388,7 @@ async function animationBottomButton(event)
 {
     //console.log("animation basse")
     let lastScrollPosition=event.pageY;
-    if (lastScrollPosition <= DOCUMENT_HEIGHT-600 && !downButtonAlreadyVisible) 
+    if (lastScrollPosition <= REAL_HEIGHT-600 && !downButtonAlreadyVisible) 
     {
         for(let opacity=0;opacity<=1;opacity+=0.1)
         {
@@ -374,7 +402,7 @@ async function animationBottomButton(event)
         //console.log("apparition",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationBottom);
 
     } 
-    else if(lastScrollPosition > DOCUMENT_HEIGHT-600 && downButtonAlreadyVisible)
+    else if(lastScrollPosition > REAL_HEIGHT-600 && downButtonAlreadyVisible)
     {
         for(let opacity=1;opacity>=0;opacity-=0.1)
         {
@@ -395,9 +423,11 @@ async function animationBottomButton(event)
 }
 
 // 4) MORE MOVIES LESS MOVIES FILTER BUTTON : SEBASTIEN
+
 const movieClassName = "col-md-2"
 const showingNumber=3;
 
+//remove the CSS property display:"none"; from the CSS properties of each movie of the list
 function show(listOfMovies)
 {
     for(let movie of listOfMovies)
@@ -405,6 +435,8 @@ function show(listOfMovies)
         movie.style["display"]="";
     }
 }
+
+//add the CSS property display:"none"; to the CSS properties of each movie of the list
 function hide(listOfMovies)
 {
     for(let movie of listOfMovies)
@@ -412,19 +444,26 @@ function hide(listOfMovies)
         movie.style["display"]="none";
     }
 }
+
+//two functions in one 
+//if complementCondition is true we get only the movies that respect the filterName
+//if complementCondition is false we get only the movies that don't respect the filterName
 function filterMovies(filterName,moviesList, complementCondition)
 {
     return moviesList.filter((element)=>
     {
         const img = element.getElementsByTagName("img")[0];
         const url=img.getAttribute("src");
+        //src of images take the form ../../assets/stupidrepository/image_name.format and we want only the last term 
         const nameAndFormat =url.split("/").pop();
-        //console.log(nameAndFormat)
+        // name of images take the form MOVIENAME-YEAR-GENRE.FORMAT
+        // we remove the format and separate the three informations in an array 
         const nameGenreYear = nameAndFormat.split(".").shift().split("-");
-        //console.log(nameGenreYear);
         const movieGenre=nameGenreYear[2];
         const movieYear=nameGenreYear[1];
 
+        //filterName should be a genre or a year
+        //we check if it correspond to the year or the genre of each movie 
         if(movieGenre===filterName)
         {
             console.log("OK",url,movieGenre);
@@ -433,26 +472,53 @@ function filterMovies(filterName,moviesList, complementCondition)
         if(movieYear===filterName)
         {
             console.log("OK",url,movieYear);
-            return !complementCondition;
+            return !complementCondition; 
         }
-        console.log("NOT OK",url,movieGenre,movieYear,filterName);
-        return complementCondition;
+        console.log("NOT OK",url,movieGenre,movieYear,filterName); 
+        return complementCondition; 
     })
 }
 
 async function activateFilterButtons()
 {
     const featuredMoviesSection = document.getElementById("featured-movies");
+
+    //I prefer to use the methods of the array class
+    //warning to never modify featuredMoviesList directly we should copy/clone it instead
     const featuredMoviesList = Array.from(featuredMoviesSection.getElementsByClassName(movieClassName));
-    //warning to never modify featuredMoviesList directly we should clone it instead
-    let filteredMoviesList = featuredMoviesList;
+
+    //movies displayed on the window
     let displayedMoviesList = featuredMoviesList;  
+    //movies undisplayed on the window
     let undisplayedMoviesList = [];
+
+    //movies that respect the actual filter (by default there is no filter)  
+    let filteredMoviesList = featuredMoviesList;
+
+    //this equality should always be respected in my code 
+    //undisplayed movies + displayed movies = filtered movies
+
+    //button that should be active to show what is filtered
+    let activeButton = document.getElementById("tousLesFilms");
 
     console.log(featuredMoviesList,displayedMoviesList,undisplayedMoviesList)
 
     const buttonMore = document.getElementById("plusDeFilms");
     const buttonLess = document.getElementById("moinsDeFilms");
+    const buttonAll= activeButton;
+
+    //by default display only a limited number of movies
+    undisplayedMoviesList=filteredMoviesList.filter((element,index) => index >= showingNumber);//index is one less
+    displayedMoviesList=filteredMoviesList.filter((element,index) => index < showingNumber);
+    hide(undisplayedMoviesList);
+    //hiding the less movie button
+    hide([].push(buttonLess)); 
+    
+
+    // I should take some time to simplify this
+    // I was clearly too careful because I didn't know why 
+    // some movies from the displayed list were not shown again after a filter
+    // maybe the bug was caused by a forgotten let in a for of loop???? (corrected now)
 
     buttonMore.addEventListener("click",()=>
         {
@@ -460,12 +526,13 @@ async function activateFilterButtons()
             {
                 displayedMoviesList=filteredMoviesList;
                 undisplayedMoviesList=[];
-                hide(displayedMoviesList)
+                hide(displayedMoviesList) // too careful maybe
                 show(displayedMoviesList);
-                console.log("more button if",displayedMoviesList,undisplayedMoviesList)
+                console.log("activate more button",displayedMoviesList,undisplayedMoviesList)
             }
-            else{
-                console.log("more button else",displayedMoviesList,undisplayedMoviesList)
+            else
+            {
+                console.log("deactivate more button",displayedMoviesList,undisplayedMoviesList)
             }
         }
 
@@ -475,15 +542,15 @@ async function activateFilterButtons()
         {
             if(filteredMoviesList.length <= showingNumber || displayedMoviesList.length <= showingNumber)
             {
-                console.log("less button if",displayedMoviesList,undisplayedMoviesList)
+                console.log("deactivate less button",displayedMoviesList,undisplayedMoviesList)
             }
             else
             {
                 undisplayedMoviesList=filteredMoviesList.filter((element,index) => index >= showingNumber);//index is one less
                 displayedMoviesList=filteredMoviesList.filter((element,index) => index < showingNumber);
-                show(undisplayedMoviesList);
+                show(undisplayedMoviesList); //too careful maybe
                 hide(undisplayedMoviesList);
-                console.log("less button else",displayedMoviesList,undisplayedMoviesList)
+                console.log("activate less button",displayedMoviesList,undisplayedMoviesList)
             }
         }
 
@@ -501,27 +568,30 @@ async function activateFilterButtons()
                 filteredMoviesList=featuredMoviesList;
                 undisplayedMoviesList=filteredMoviesList.filter((element,index) => index >= showingNumber);//index is one less
                 displayedMoviesList=filteredMoviesList.filter((element,index) => index < showingNumber);
-                show(featuredMoviesList);
+                show(featuredMoviesList); 
                 hide(undisplayedMoviesList);
-                show(displayedMoviesList)
-                button.classList.remove("active");
-                console.log(button);
+                show(displayedMoviesList); //too careful maybe
+                activeButton.classList.remove("active");
+                buttonAll.classList.add("active");
+                console.log("deactivate button ", activeButton.id);
+                activeButton=buttonAll;
             }
             else
             {
                 filteredMoviesList=filterMovies(event.target.id, featuredMoviesList, false);
                 const restOfMovies=filterMovies(event.target.id, featuredMoviesList, true);
-                show(restOfMovies)
+                show(restOfMovies); //too careful maybe
                 hide(restOfMovies);
                 undisplayedMoviesList=filteredMoviesList.filter((element,index) => index >= showingNumber);//index is one less
                 displayedMoviesList=filteredMoviesList.filter((element,index) => index < showingNumber);
-                show(undisplayedMoviesList)
+                show(undisplayedMoviesList); //too careful maybe
                 hide(undisplayedMoviesList);
-                show(displayedMoviesList)
+                show(displayedMoviesList);
                 console.log("filterone", filteredMoviesList,"filterreverse", restOfMovies)
+                activeButton.classList.remove("active");
                 button.classList.add("active");
-                console.log(button);
-                
+                activeButton=button;
+                console.log("activate button ", activeButton.id);               
             }
             
             
@@ -543,11 +613,13 @@ async function activateFormsButtons()
 
 async function activateShopMoviesButton()
 {
+    //maybe specify the number of movies of one slide in a constant 
+
     const shopMovieElement = document.getElementById("shop-movies-list");
     console.log(shopMovieElement);
     const shopMoviesList=shopMovieElement.getElementsByClassName("col-md-3");
-    const numberOfSlides=Math.ceil(shopMoviesList.length / 4); // 40 -> 10 slides , 41 -> 11 slides
-    let currentSlide = 1;//normal numerotation first slide : 1, second slide : 2
+    const numberOfSlides=Math.ceil(shopMoviesList.length / 4); // 40 movies -> 10 slides , 41 movies -> 11 slides
+    let currentSlide = 1; //usual numbering system : first slide : 1, second slide : 2
     console.log(shopMoviesList.length, numberOfSlides, currentSlide);
     hideEverySlide();
     showCurrentSlide();
@@ -576,7 +648,7 @@ async function activateShopMoviesButton()
         }
     );
 
-
+    //very easy to hide everything
     function hideEverySlide()
     {
         for(let movie of shopMoviesList)
@@ -587,9 +659,10 @@ async function activateShopMoviesButton()
 
     function showSlide(slideNumber)
     {
+        //if the parameter is a valid slideNumber
         if (slideNumber < numberOfSlides && slideNumber>=1)
         {
-            //aucune crainte
+            //nothing to fear
             for(let i = 4; i > 0; i--)
             {
                 const index=slideNumber*4 - i;
@@ -598,6 +671,7 @@ async function activateShopMoviesButton()
             }
 
         }
+        //the last slide has possibly less movies on it
         else if(slideNumber == numberOfSlides)
         {
             for(let i = 4; i > 0; i--)
@@ -613,9 +687,10 @@ async function activateShopMoviesButton()
     }
     function hideSlide(slideNumber)
     {
+        //if the parameter is a valid slideNumber
         if (slideNumber < numberOfSlides && slideNumber>=1)
         {
-            //aucune crainte
+            //nothing to fear
             for(let i = 4; i > 0; i--)
             {
                 const index=slideNumber*4 - i;
@@ -623,6 +698,7 @@ async function activateShopMoviesButton()
             }
 
         }
+        //the last slide has possibly less movies on it
         else if(slideNumber == numberOfSlides)
         {
             for(let i = 4; i > 0; i--)
@@ -636,6 +712,7 @@ async function activateShopMoviesButton()
             }
         }
     }
+    //show or hide specific slides
     function showCurrentSlide()
     {
         showSlide(currentSlide);
@@ -671,7 +748,7 @@ async function activateShopMoviesButton()
 async function main()
 {
     //display(body,0);
-    //await ageRestrictionBox();
+    await ageRestrictionBox();
     console.log("Demande de l'age terminée \o/")
     //await cookieBox()
     console.log("Cookie box chargée \o/")
@@ -679,7 +756,7 @@ async function main()
     console.log("Boutons de défilement chargés \o/")
     await activateFilterButtons();
     console.log("Filtres activés \o/")
-    await activateFormsButtons();
+    //await activateFormsButtons();
     console.log("Formulaires chargés \o/")
     await activateShopMoviesButton();
     console.log("defilement du shop movie opérationel \o/")
