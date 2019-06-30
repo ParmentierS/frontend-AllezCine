@@ -39,6 +39,7 @@ async function ageRestrictionBox()
     const ageBox = document.getElementById("ageBox");
     const buttonYes = document.getElementsByClassName("yes")[0];
     const buttonNo = document.getElementsByClassName("no")[0];
+    console.log(buttonNo,buttonYes)
 
     //everything should disappear
     const bodyChildren = body.children;
@@ -47,12 +48,11 @@ async function ageRestrictionBox()
     {
         child.style["display"]="none";
     }
+    //and ageBox appear
     ageBox.style["display"]="";
-
 
     //showing body again
     body.style["opacity"]=1;
-    //and ageBox appear
     
     console.log(body,ageBox,buttonYes,buttonNo,bodyChildren);
     console.table(body.innerHTML);
@@ -82,7 +82,6 @@ async function ageRestrictionBox()
     buttonYes.addEventListener("click",
         ()=>
         {
-            ageBox.style["display"]="none";
             clicked=true;
         }
     )
@@ -96,6 +95,8 @@ async function ageRestrictionBox()
     {
         child.style["display"]="";
     }   
+    //ageBox disappear
+    ageBox.style["display"]="none";
 }
 
 
@@ -512,7 +513,7 @@ async function activateFilterButtons()
     displayedMoviesList=filteredMoviesList.filter((element,index) => index < showingNumber);
     hide(undisplayedMoviesList);
     //hiding the less movie button
-    hide([].push(buttonLess)); 
+    buttonLess.style["display"]="none";
     
 
     // I should take some time to simplify this
@@ -529,6 +530,8 @@ async function activateFilterButtons()
                 hide(displayedMoviesList) // too careful maybe
                 show(displayedMoviesList);
                 console.log("activate more button",displayedMoviesList,undisplayedMoviesList)
+                buttonMore.style["display"]="none";
+                buttonLess.style["display"]="";
             }
             else
             {
@@ -551,6 +554,8 @@ async function activateFilterButtons()
                 show(undisplayedMoviesList); //too careful maybe
                 hide(undisplayedMoviesList);
                 console.log("activate less button",displayedMoviesList,undisplayedMoviesList)
+                buttonMore.style["display"]="";
+                buttonLess.style["display"]="none";
             }
         }
 
@@ -573,8 +578,11 @@ async function activateFilterButtons()
                 show(displayedMoviesList); //too careful maybe
                 activeButton.classList.remove("active");
                 buttonAll.classList.add("active");
-                console.log("deactivate button ", activeButton.id);
                 activeButton=buttonAll;
+                buttonMore.style["display"]="";
+                buttonLess.style["display"]="none";
+                console.log("deactivate button ", activeButton.id);
+
             }
             else
             {
@@ -591,6 +599,8 @@ async function activateFilterButtons()
                 activeButton.classList.remove("active");
                 button.classList.add("active");
                 activeButton=button;
+                buttonMore.style["display"]="";
+                buttonLess.style["display"]="none";
                 console.log("activate button ", activeButton.id);               
             }
             
@@ -750,13 +760,13 @@ async function main()
     //display(body,0);
     await ageRestrictionBox();
     console.log("Demande de l'age terminée \o/")
-    //await cookieBox()
+    await cookieBox()
     console.log("Cookie box chargée \o/")
     await initArrowButtons()
     console.log("Boutons de défilement chargés \o/")
     await activateFilterButtons();
     console.log("Filtres activés \o/")
-    //await activateFormsButtons();
+    await activateFormsButtons();
     console.log("Formulaires chargés \o/")
     await activateShopMoviesButton();
     console.log("defilement du shop movie opérationel \o/")
