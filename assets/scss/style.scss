@@ -184,3 +184,8 @@ body {
     padding-top: 12px;
     border-radius: 50%;
 }
+
+.movieLink, .movieLink:hover, .movieLink:active, .movieLink:visited {
+    color: white;
+    text-decoration: none;
+}
