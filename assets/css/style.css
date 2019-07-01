@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 816316ddcc0e019828061b7dc76279f88e9e629e
 main img {
   width: 100%;
   height: auto;
@@ -66,11 +63,8 @@ main #favoriteRow {
 
 #connectFooter p {
   font-size: 1.3em;
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 816316ddcc0e019828061b7dc76279f88e9e629e
 @font-face {
   body {
     font-family: "A750";
@@ -167,8 +161,6 @@ main #favoriteRow {
 
 #hamburgerNavBar {
   color: #fe4240;
-<<<<<<< HEAD
-=======
 }
 
 .card-text {
@@ -347,5 +339,4 @@ main #favoriteRow {
   width: 45px;
   padding-top: 12px;
   border-radius: 50%;
->>>>>>> 816316ddcc0e019828061b7dc76279f88e9e629e
 }
