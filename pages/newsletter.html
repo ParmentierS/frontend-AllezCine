@@ -1,147 +1,329 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<!--
-    - Crédits -
-    Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
--->
 
 <head>
-  <!--PREPARATION DE LA PAGE-->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLEZCINE! - Newsletter</title>
-  <!--STYLE-->
-  <style type="text/css">
-  </style>
+    <!--PAGE SETUP-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AllerCiné! - Newsletter</title>
+    <!--CSS SETUP-->
+    <style type="text/css">
+        #backgroundTable {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            line-height: 100% !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            border: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a img {
+            border: none;
+        }
+
+        .image_fix {
+            display: block;
+        }
+
+        p {
+            margin: 0px 0px !important;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        a {
+            color: #33b9ff;
+            text-decoration: none;
+            text-decoration: none !important;
+        }
+
+        /*STYLES*/
+        table[class=full] {
+            width: 100%;
+            clear: both;
+        }
+
+        /*Style pour tablette*/
+        @media only screen and (max-width: 640px) {
+
+            a[href^="tel"],
+            a[href^="sms"] {
+                text-decoration: none;
+                color: #33b9ff;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"],
+            .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: #33b9ff !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+
+            table[class=devicewidth] {
+                width: 440px !important;
+                text-align: center !important;
+            }
+
+            table[class=devicewidthinner] {
+                width: 420px !important;
+                text-align: center !important;
+            }
+
+            img[class=banner] {
+                width: 440px !important;
+                height: 220px !important;
+            }
+
+            img[class=colimg2] {
+                width: 440px !important;
+                height: 220px !important;
+            }
+
+
+        }
+
+        /* Style pour smartphone */
+        @media only screen and (max-width: 480px) {
+
+            a[href^="tel"],
+            a[href^="sms"] {
+                text-decoration: none;
+                color: #ffffff;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"],
+            .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: #ffffff !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+
+            table[class=devicewidth] {
+                width: 280px !important;
+                text-align: center !important;
+            }
+
+            table[class=devicewidthinner] {
+                width: 260px !important;
+                text-align: center !important;
+            }
+
+            img[class=banner] {
+                width: 280px !important;
+                height: 140px !important;
+            }
+
+            img[class=colimg2] {
+                width: 280px !important;
+                height: 140px !important;
+            }
+
+            td[class="padding-top15"] {
+                padding-top: 15px !important;
+            }
+
+
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <!-- TITRE DE LA NEWSLETTER -->
-    <div>
-      <p style="font-family: Helvetica, arial, sans-serif" align="right">Newsletter du mois de juin 2019</p>
-    </div>
-    <!-- TABLE INTRO -->
-    <table width="100%" bgcolor="#fe4240" cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
-      st-sortable="preheader">
-      <tbody>
-        <tr>
-          <td>
-            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-              <tbody>
-                <tr>
-                  <td width="100%">
+    <!-- DEBUT DU PRE-HEADER -->
+    <table width="100%" bgcolor="#2a2a2a" cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
+        st-sortable="preheader">
+        <tbody>
+            <tr>
+                <td>
                     <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-                      <tbody>
-                        <!-- ESPACE AU DESSUS -->
-                        <tr>
-                          <td width="100%" height="5"></td>
-                        </tr>
-                        <!-- ESPACE AU DESSUS -->
-                        <tr>
-                          <td>
-                            <table width="48%" align="left" border="0" cellpadding="0" cellspacing="0">
-                              <tbody>
-                                <tr>
-                                  <td align="right" valign="middle"
-                                    style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828"
-                                    st-content="forward">
-                                    <a href="#" style="text-decoration: none; color: #ffffff">Voir en ligne</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                        <!-- ESPACE AU DESSOUS -->
-                        <tr>
-                          <td width="100%" height="10"></td>
-                        </tr>
-                        <!-- ESPACE AU DESSOUS -->
-                      </tbody>
+                        <tbody>
+                            <tr>
+                                <td width="100%">
+                                    <table width="600" cellpadding="0" cellspacing="0" border="0" align="center"
+                                        class="devicewidth">
+                                        <tbody>
+                                            <!-- ESPACE -->
+                                            <tr>
+                                                <td width="100%" height="10"></td>
+                                            </tr>
+                                            <!-- ESPCACE -->
+                                            <tr>
+                                                <td>
+                                                    <table width="48%" align="left" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="left" valign="middle"
+                                                                    style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828"
+                                                                    st-content="viewonline">
+                                                                    <a href="#"
+                                                                        style="text-decoration: none; color: #ffffff">Voir
+                                                                        en ligne </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table width="48%" align="right" border="0" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="right" valign="middle"
+                                                                    style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828"
+                                                                    st-content="forward">
+                                                                    <a href="#"
+                                                                        style="text-decoration: none; color: #ffffff">Envoyer
+                                                                        par email </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!-- ESPACE -->
+                                            <tr>
+                                                <td width="100%" height="10"></td>
+                                            </tr>
+                                            <!-- ESPACE -->
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
+                </td>
+            </tr>
+        </tbody>
     </table>
-  </header>
-  <!--
-    - Crédits -
-    Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
--->
-  <!-- CONTENU DE LA NEWSLETTER -->
-  <main>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <img src="../assets/img/Card-Hostel.png" alt="">
-          </td>
-          <td>
-            <img src="../assets/img/Card-Hostel.png" alt="">
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
-  <!--
-    - Crédits -
-    Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
--->
-  <!-- FOOTER DE LA NEWSLETTER -->
-  <footer>
-    <table width="100%" bgcolor="#fe4240" cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
-      st-sortable="preheader">
-      <tbody>
-        <tr>
-          <td>
-            <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-              <tbody>
-                <tr>
-                  <td width="100%">
+    <!-- FIN DU PRE-HEADER -->
+    <!-- DEBUT DU HEADER -->
+    <table width="100%" bgcolor="#2a2a2a" cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
+        st-sortable="header">
+        <tbody>
+            <tr>
+                <td>
                     <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-                      <tbody>
-                        <!-- ESPACE AU DESSUS -->
-                        <tr>
-                          <td width="100%" height="5"></td>
-                        </tr>
-                        <!-- ESPACE AU DESSUS -->
-                        <tr>
-                          <td>
-                            <table width="48%" align="left" border="0" cellpadding="0" cellspacing="0">
-                              <tbody>
-                                <tr>
-                                  <td align="right" valign="left"
-                                    style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828"
-                                    st-content="forward">
-                                    <a href="#" style="text-decoration: none; color: #ffffff">Se désinscrire</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                        <!-- ESPACE AU DESSOUS -->
-                        <tr>
-                          <td width="100%" height="10"></td>
-                        </tr>
-                        <!-- ESPACE AU DESSOUS -->
-                      </tbody>
+                        <tbody>
+                            <tr>
+                                <td width="100%">
+                                    <table bgcolor="#d41b29" width="600" cellpadding="0" cellspacing="0" border="0"
+                                        align="center" class="devicewidth">
+                                        <tbody>
+                                            <!-- ESPACE -->
+                                            <tr>
+                                                <td height="5"
+                                                    style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                                    &nbsp;</td>
+                                            </tr>
+                                            <!-- ESPACE -->
+                                            <tr>
+                                                <td>
+                                                    <!-- DEBUT DU LOGO -->
+                                                    <table width="140" align="left" border="0" cellpadding="0"
+                                                        cellspacing="0" class="devicewidth">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="140" height="60" align="center">
+                                                                    <div class="imgpop">
+                                                                        <a target="_blank" href="#">
+                                                                            <img src="#" alt="Logo AllerCiné!"
+                                                                                border="0" width="118" height="60"
+                                                                                style="display:block; border:none; outline:none; text-decoration:none;">
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- FIN DU LOGO -->
+                                                    <!-- DEBUT DU MENU -->
+                                                    <table width="250" border="0" align="right" valign="middle"
+                                                        cellpadding="0" cellspacing="0" border="0" class="devicewidth">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="font-family: Helvetica, arial, sans-serif; font-size: 20px;color: #ffffff"
+                                                                    st-content="phone" height="60">
+                                                                    Téléphone : (add number)
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- FIN DU MENU -->
+                                                </td>
+                                            </tr>
+                                            <!-- ESPACE -->
+                                            <tr>
+                                                <td height="5"
+                                                    style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                                    &nbsp;</td>
+                                            </tr>
+                                            <!-- ESPACE -->
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
+                </td>
+            </tr>
+        </tbody>
     </table>
-  </footer>
-  <!--FIN DU DOC-->
+    <!-- FIN DU HEADER -->
+    <!-- DEBUT DE LA BANNIERE PRINCIPALE -->
+    <table width="100%" bgcolor="#2a2a2a" cellpadding="0" cellspacing="0" border="0" id="backgroundTable"
+        st-sortable="banner">
+        <tbody>
+            <tr>
+                <td>
+                    <table width="600" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                        <tbody>
+                            <tr>
+                                <td width="100%">
+                                    <!-- DEBUT DE L'IMAGE -->
+                                    <table width="600" align="center" cellspacing="0" cellpadding="0" border="0"
+                                        class="devicewidth">
+                                        <tbody>
+                                            <tr>
+
+                                                <td align="center" st-image="banner-image">
+                                                    <div class="imgpop">
+                                                        <a target="_blank" href="#"><img width="600" border="0"
+                                                                height="300" alt="Bannière image" border="0"
+                                                                style="display:block; border:none; outline:none; text-decoration:none;"
+                                                                src="#" class="banner"></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- FIN DE L'IMAGE -->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- FIN DE LA BANNIERE PRINCIPALE -->
 </body>
 
 </html>
