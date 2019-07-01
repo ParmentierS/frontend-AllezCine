@@ -1,4 +1,9 @@
-<<<<<<< HEAD
+body {
+    @font-face {
+        font-family: "A750";
+        src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
+    }
+}
 // MAIN
 // CONTAINER
 main {
@@ -70,14 +75,6 @@ main {
     p {
         font-size: 1.3em;
     }
-=======
-body {
-    @font-face {
-        font-family: "A750";
-        src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
-    }
-}
-
 .titreNav {
     font-size: 35px;
     font-weight: 900;
@@ -177,5 +174,182 @@ body {
 
 .card {
     border: none;
->>>>>>> Ludovic
+//Taille image
+.w-100 {
+    width: 100% !important;
+    height: 440px;
+    object-fit: cover;
+}
+
+//Barre de navigation transparente
+.navBar {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background: none;
+    border: none;
+    border-radius: none;
+}
+
+//titre des menus navBar
+.navBar .navbar-nav a {
+    color: white !important;
+    font-size: 20px;
+}
+
+//texte contenu navBar
+.navBar .navbar-nav .dropdown-menu a {
+    color: black !important;
+}
+
+//Titre ALLEZCINE! navBar gauche
+.navbar-brand {
+    color: white !important;
+    font-size: 45px;
+    font-weight: 900;
+    text-shadow: 4px 4px 2px rgba(black, 1);
+}
+
+//position carousel
+.my-carousel {
+    //position: absolute; //Foire le texte en dessous
+    top: 0;
+}
+
+//titre 'Allez' navBar
+.titreAllez {
+    color: #fe4240;
+}
+
+//titre 'home' navBar
+.titreHome {
+    color: #fe4240;
+    font-size: 20px;
+}
+
+/* /!\ SEARCHBAR /!\ */
+
+//Fond searchbar
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 30px;
+    background-color: #fe4240;
+    border-radius: 30px;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+//Texte 'Search' intérieur navBar
+.search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    transition: width 0.4s linear;
+    //Texte à déplacer /!\
+}
+
+//Transition ouverture
+.searchbar:hover>.search_input {
+    padding: -30px 10px;
+    width: 250px;
+    caret-color: white;
+    transition: width 0.4s linear;
+}
+
+//Couleur loupe transition
+.searchbar:hover>.search_icon {
+    color: white;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    padding-bottom: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
+//suppression puce 'Link' navBar 
+.link-nav {
+    list-style: none;
+}
+
+//Texte 'Link' navBar 
+.titreLink {
+    color: white;
+    font-size: 20px;
+}
+//Titre 'Latest Movies Online'
+.titreLMO {
+    font-size: 45px;
+    font-weight: 700;
+    text-shadow: 4px 4px 2px rgba(black, 1);
+}
+//Lettres 'MO', 'ON'
+.lettreLMO {
+    color: #fe4240;
+    font-size: 55px;
+}
+
+//Phrase accroche film
+.descriptifFilm {
+    padding-bottom: 50px;
+    letter-spacing: 0.6em;
+    text-shadow: 4px 4px 2px rgba(black, 1);
+}
+
+//Logo 'regarder le trailer'
+.logoTrailer {
+    background-color: #fe4240;
+    width: 150px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-weight: bold;
+}
+
+//navBar dessous carousel
+.bottomNav {
+    background-color: #fe4240;
+}
+//Logo 'Login'
+.loginNav {
+    background-color: black;
+}
+//icone téléphone
+.fa-phone {
+    color: white;
+    transform: rotateY(180deg);
+}
+//numéro de tel navBar
+.phoneNav {
+    color: white;
+}
+//couleur bouton 'login', 's/'enregistrer'
+.black-button {
+    background-color: black;
+    border: none;
+    margin: 5px;
+}
+
+.hamburgerIcon {
+    color: white;
+    background-color: #fe4240;
+    height: 45px;
+    width: 45px;
+    padding-top: 12px;
+    border-radius: 50%;
 }
