@@ -34,14 +34,18 @@ main {
         }
     }
 }
+// FAVORITES MOVIES
 
 // FAVORITES SERIES
+
+// FAVORITES MOVIES & SERIES
 #seriesContainer {
     #boutonActif {
         background-color: #fe4240;
         border-radius:0%;
     }
     #boutonNonActif {
+        background-color: #f3f1f2;
         color: black;
     }
 }
