@@ -9,7 +9,10 @@ body {
 .card {
     border: none;
 }
-
+#plusDeFilms, #moinsDeFilms {
+    border-radius: 0%;
+    margin: 1%;
+}
 main {
     img {
         width: 100%;
@@ -29,15 +32,18 @@ main {
             border: none;
             border-color:#f1f1f1;
             #titleFilm {
-                font-size: 0.8em;
+                font-size: 0.9em;
             }
             .text {
-                font-size: 0.5em;
+                font-size: 0.7em;
+                height: 50px;
             }
         }
     }
 }
+
 // FAVORITES MOVIES
+
 #moviesContainer{
     #boutonActif {
         background-color: #fe4240;
@@ -52,6 +58,8 @@ main {
         padding-bottom: 2%;
     }
 }
+
+
 
 // FAVORITES SERIES
 #seriesContainer{
@@ -83,21 +91,21 @@ main {
 // CONTACT FORM
 
 // Footer
+#buttonSend {
+    border-radius: 0%;
+    font-weight: 800;
+}
+#footerFormulaire {
+    border-radius: 0%;
+}
 #siteFooter {
     background-color: black;
-
-    #buttonSend {
-        border-radius: 0%;
-        font-weight: 100;
-    }
-
     #basic-addon2 {
         background-color: #fe4240;
         color: white;
         border: 0%;
         border-radius: 0%;
     }
-
     #subscribeFooter {
         color: #fe4240;
         font-size: 1.5em;
@@ -139,3 +147,4 @@ main {
     }
 
 }
+
