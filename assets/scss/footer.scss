@@ -36,7 +36,6 @@ main {
             }
             .text {
                 font-size: 0.7em;
-                height: 50px;
             }
         }
     }
@@ -59,6 +58,27 @@ main {
     }
 }
 
+/*.card-body {
+    border: solid 2px black;
+}*/
+
+.card-group {
+    height: 375px;
+    margin-top: 25px;
+}
+
+/*.text {
+    background-color: #fe4240;
+    margin-top: 50px;
+}*/
+
+.featMovies {
+    margin: 25px;
+}
+
+.shopMovies {
+    margin-top: 25px;
+}
 
 
 // FAVORITES SERIES
