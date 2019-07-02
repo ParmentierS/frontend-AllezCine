@@ -177,7 +177,75 @@
   border-radius: 50%;
 }
 
-.movieLink, .movieLink:hover, .movieLink:active, .movieLink:visited {
+.movieLink,
+.movieLink:hover,
+.movieLink:active,
+.movieLink:visited {
   color: white;
   text-decoration: none;
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -100px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding: 15px;
+  width: 150px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 50px 50px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#facebook {
+  top: 620px;
+  background-color: #3b5998;
+}
+
+.fa-facebook-f {
+  color: black;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-left: 8.5px;
+  padding-top: 4px;
+}
+
+#twitter {
+  top: 685px;
+  background-color: #00acee;
+  word-spacing: 24px;
+}
+
+.fa-twitter {
+  color: black;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+#googlePlus {
+  top: 749px;
+  background-color: #db4a39;
+  word-spacing: 5px;
+}
+
+.fa-google-plus-g {
+  color: black;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-left: 3px;
+  padding-top: 5px;
 }
