@@ -154,6 +154,18 @@ body {
     font-weight: bold;
 }
 
+//couleur indicateur page carousel inactif
+#carouselIndicators {
+    background-color: white;
+    opacity: 1;
+}
+
+//couleur icone emplacement carousel
+#carouselIndicators.active {
+    background-color: #fe4240;
+    opacity: 1;
+}
+
 //navBar dessous carousel
 .bottomNav {
     background-color: #fe4240;
@@ -214,12 +226,12 @@ body {
 #mySidenav a:hover {
     left: 0;
 }
-
+//couleur fond facebook
 #facebook {
     top: 620px;
     background-color: #3b5998;
 }
-
+//logo et cercle blanc
 .fa-facebook-f {
     color: black;
     background-color: white;
@@ -230,13 +242,13 @@ body {
     padding-top: 4px;
 
 }
-
+//couleur fond twitter
 #twitter {
     top: 685px;
     background-color: #00acee;
     word-spacing: 24px;
 }
-
+//logo et cercle blanc
 .fa-twitter {
     color: black;
     background-color: white;
@@ -246,13 +258,13 @@ body {
     padding-left: 5px;
     padding-top: 5px;
 }
-
+//couleur fond g+
 #googlePlus {
     top: 749px;
     background-color: #db4a39;
     word-spacing: 5px;
 }
-
+//logo et cercle blanc
 .fa-google-plus-g {
     color: black;
     background-color: white;

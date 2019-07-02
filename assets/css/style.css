@@ -144,6 +144,16 @@
   font-weight: bold;
 }
 
+#carouselIndicators {
+  background-color: white;
+  opacity: 1;
+}
+
+#carouselIndicators.active {
+  background-color: #fe4240;
+  opacity: 1;
+}
+
 .bottomNav {
   background-color: #fe4240;
 }
