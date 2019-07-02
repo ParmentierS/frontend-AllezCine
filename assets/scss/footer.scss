@@ -38,18 +38,43 @@ main {
     }
 }
 // FAVORITES MOVIES
-
-// FAVORITES SERIES
-
-// FAVORITES MOVIES & SERIES
-#seriesContainer #moviesContainer{
+#moviesContainer{
     #boutonActif {
         background-color: #fe4240;
         border-radius:0%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
     #boutonNonActif {
         background-color: #f3f1f2;
         color: black;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+// FAVORITES SERIES
+#seriesContainer{
+    #boutonActif {
+        background-color: #fe4240;
+        border-radius:0%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        &:hover{
+            background-color:#fe4240; 
+            color: white;
+        }
+    }
+    #boutonNonActif {
+        background-color: #f3f1f2;
+        border-radius:0%;
+        color: black;
+        padding-bottom:2%;
+        padding-top: 2%;
+        &:hover{
+            background-color:#fe4240; 
+            color: white;
+        }
     }
 }
 
