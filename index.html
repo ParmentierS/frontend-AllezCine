@@ -53,7 +53,7 @@
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="hamburgerIcon fas fa-bars"></i></span>
-                </header>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -100,8 +100,7 @@
         </nav>
         <div id="carouselExampleIndicators" class="my-carousel carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" id="carouselIndicators">
-                </li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" id="carouselIndicators"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1" id="carouselIndicators"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2" id="carouselIndicators"></li>
             </ol>
@@ -685,221 +684,220 @@
                             </div>
                         </div>
                     </div>
-                    <!--BOUTON-VOIR_PLUS-->
-                    <button type="button" class="btn btn-danger" id="plusDeFilms">Plus de Films</button>
-                    <button type="button" class="btn btn-danger" id="moinsDeFilms">Moins de films</button>
-                    <!--FIN_LISTING-FAVORITE_SERIES-->
+                </div>
+                <!--BOUTON-VOIR_PLUS-->
+                <button type="button" class="btn btn-danger" id="plusDeFilms">Plus de Films</button>
+                <button type="button" class="btn btn-danger" id="moinsDeFilms">Moins de films</button>
+                <!--FIN_LISTING-FAVORITE_SERIES-->
+            </div>
+        </div>
+        <!-- Shop movies -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 shopMovies">
+                    <h2>SHOP MOVIES</h2>
                 </div>
             </div>
-            <!-- Shop movies -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 shopMovies">
-                        <h2>SHOP MOVIES</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row navigationArrow">
+                <div class="col-md-1 offset-md-11">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary" id="left-scrolling">&#139;</button>
+                        <button type="button" class="btn btn-secondary" id="right-scrolling">&#155;</button>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="row navigationArrow">
-                    <div class="col-md-1 offset-md-11">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary" id="left-scrolling">&#139;</button>
-                            <button type="button" class="btn btn-secondary" id="right-scrolling">&#155;</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Listing film-->
-            <div class="container-fluid" id="shop-movies-list">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/WhatWeDoInTheShadows-2014-comedie.jpg"
-                                                class="card-img-top" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
+        </div>
+        <!--Listing film-->
+        <div class="container-fluid" id="shopMoviesList">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/WhatWeDoInTheShadows-2014-comedie.jpg" class="card-img-top"
+                                            alt="">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/thefall-2006-dramatique.jpg" class="card-img-top"
-                                                alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/Survivestyle5-2004-comedie.jpg" class="card-img-top"
-                                                alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">Année</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/seven-1995-thriller.jpg" class="card-img-top" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row movielistdown">
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="containerImg">
-                                            <img src="assets/img/lepatientanglais-1996-dramatique.jpg"
-                                                class="card-img-top" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/thefall-2006-dramatique.jpg" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/starwarsempire-1980-scifi.jpg" class="card-img-top"
-                                                alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/Survivestyle5-2004-comedie.jpg" class="card-img-top"
+                                            alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">Année</small></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="chtitrailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/intouchables-2011-comedie.jpg" class="card-img-top"
-                                                alt="affiche film">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/seven-1995-thriller.jpg" class="card-img-top" alt="">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-group">
-                                    <div id="trailer" class="card text-center">
-                                        <div class="imgContainer">
-                                            <img src="assets/img/batmanmovie-2017-comedie.jpg" class="card-img-top"
-                                                alt="affiche film">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Titre film</h5>
-                                            <p class="card-text col-md-12"><small class="text">2016</small></p>
-                                        </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Modal player-->
-                    <div class="col-md-5 align-self-stretch">
-                        <div class="row h-100">
-                            <div class="col-md-12">
-                                <div class="card-group h-100">
-                                    <div class="card text-center h-100">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe id="videoTrailer" width="560" height="315"
-                                                src="https://www.youtube.com/watch?v=eZhCwpLL9AM" frameborder="0"
-                                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="card-body">
-                                            <h3 class="card-title">Titre film</h3>
-                                            <p class="card-text col-md-12"><small class="text">Synopsis</small>
-                                            </p>
-                                            <p class="card-text col-md-12"><small class="text">Date de
-                                                    sortie</small>
-                                            </p>
-                                            <p class="card-text col-md-12"><small class="text">Genre</small></p>
-                                            <p class="card-text col-md-12"><small class="text">Prix</small></p>
-                                        </div>
+                    <div class="row movielistdown">
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="containerImg">
+                                        <img src="assets/img/lepatientanglais-1996-dramatique.jpg" class="card-img-top"
+                                            alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/starwarsempire-1980-scifi.jpg" class="card-img-top" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="chtitrailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/intouchables-2011-comedie.jpg" class="card-img-top"
+                                            alt="affiche film">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-group">
+                                <div id="trailer" class="card text-center">
+                                    <div class="imgContainer">
+                                        <img src="assets/img/batmanmovie-2017-comedie.jpg" class="card-img-top"
+                                            alt="affiche film">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Titre film</h5>
+                                        <p class="card-text col-md-12"><small class="text">2016</small></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Fin du modal player-->
                 </div>
+                <!--Modal player-->
+                <div class="col-md-6 align-self-stretch">
+                    <div class="row h-100">
+                        <div class="col-md-12">
+                            <div class="card-group h-100">
+                                <div class="card text-center h-100">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="videoTrailer" width="560" height="315"
+                                            src="https://www.youtube.com/watch?v=eZhCwpLL9AM" frameborder="0"
+                                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Titre film</h3>
+                                        <p class="card-text col-md-12"><small class="text">Synopsis</small>
+                                        </p>
+                                        <p class="card-text col-md-12"><small class="text">Date de
+                                                sortie</small>
+                                        </p>
+                                        <p class="card-text col-md-12"><small class="text">Genre</small></p>
+                                        <p class="card-text col-md-12"><small class="text">Prix</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin du modal player-->
             </div>
+        </div>
 
-            <!-- Contact US -->
-            <div class="container mt-4">
-                <h2>CONTACT US</h2>
-                <div class="row justify-content-center">
-                    <form class="card-formulaire bg-white">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control" placeholder="FIRST NAME">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" class="form-control" placeholder="LAST NAME">
-                                </div>
+        <!-- Contact US -->
+        <div class="container mt-4">
+            <h2>CONTACT US</h2>
+            <div class="row justify-content-center">
+                <form class="card-formulaire bg-white">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" placeholder="FIRST NAME">
                             </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="EMAIL">
-                                </div>
-                                <div class="col-lg-6">
-                                    <label for="exampleFormControlSelect1"></label>
-                                    <input type="text" class="form-control" placeholder="SUBJECT">
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-12">
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                        placeholder="YOUR MESSAGE"></textarea>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-4">
-                                    <button type="button" class="btn btn-danger" id="buttonSend">SEND
-                                        MESSAGE</button>
-                                </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control" placeholder="LAST NAME">
                             </div>
                         </div>
-                    </form>
-                </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label for="exampleFormControlInput1"></label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="EMAIL">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="exampleFormControlSelect1"></label>
+                                <input type="text" class="form-control" placeholder="SUBJECT">
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="YOUR MESSAGE"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-4">
+                                <button type="button" class="btn btn-danger" id="buttonSend">SEND
+                                    MESSAGE</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
+        </div>
         </div>
     </main>
     <!-- Footer -->

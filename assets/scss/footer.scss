@@ -12,6 +12,9 @@ body {
 #plusDeFilms, #moinsDeFilms {
     border-radius: 0%;
     margin: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 main {
     img {
@@ -39,6 +42,10 @@ main {
             }
         }
     }
+}
+
+#shopMoviesList {
+    margin-left: 50px;
 }
 
 // FAVORITES MOVIES
@@ -78,6 +85,7 @@ main {
 
 .shopMovies {
     margin-top: 25px;
+    margin-bottom: -40px;
 }
 
 
