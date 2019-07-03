@@ -45,6 +45,135 @@ main {
         text-align: center;
     }
 
+    .motOneFooter,
+    .motTwoFooter,
+    .titleFooter {
+        font-size: 1.1em;
+    }
+
+    .motOneFooter {
+        color: #fe4240;
+    }
+
+    .motTwoFooter {
+        color: white;
+    }
+
+    .titleFooter {
+        color: gray;
+    }
+
+    .listeFooter {
+        font-size: 0.7em;
+    }
+}
+
+#connectFooter {
+    text-align: center;
+    align-content: center;
+
+    p {
+        font-size: 1.3em;
+    }
+.titreNav {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+#titreAllez {
+    color: #fe4240;
+}
+
+#titreCine {
+    color: white;
+}
+
+#navHome {
+    color: #fe4240;
+}
+
+#titreJumbotron {
+    font-size: 45px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+.lettreJumbotron {
+    color: #fe4240;
+    font-size: 55px;
+}
+
+#texteJumbotron {
+    text-align: center;
+    color: white;
+    letter-spacing: 0.4em;
+    text-shadow: -1px 1px 5px rgba(0,0,0,0.6); 
+}
+
+#titreFilm {
+    font-style: italic;
+}
+
+#boutonTrailer {
+    background-color: #fe4240;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 200px;
+    border: none;
+}
+
+.jumbotron {
+    background-image: url('/assets/img/Jumbotron_550-Drive.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 350px;
+    border-radius: 0px;
+}
+
+#searchIcon {
+    color: white;
+    border: none;
+}
+
+#searchBar {
+    opacity: 0.5;
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    float: right;
+    padding-right: 150px;
+    border-radius: 50px;
+}
+
+#catNav {
+    color: white;
+    opacity: 0.5;
+}
+
+#contactNav {
+    color: white;
+}
+
+#navBar {
+    background-color: #313131;
+}
+
+#hamburgerNavBar {
+    color: #fe4240;
+}
+
+//Featured Movies
+
+.card-text {
+    text-align: center;
+}
+
+.card {
+    border: none;
 //Taille image
 .w-100 {
     width: 100% !important;
@@ -158,14 +287,12 @@ main {
     color: white;
     font-size: 20px;
 }
-
 //Titre 'Latest Movies Online'
 .titreLMO {
     font-size: 45px;
     font-weight: 700;
     text-shadow: 4px 4px 2px rgba(black, 1);
 }
-
 //Lettres 'MO', 'ON'
 .lettreLMO {
     color: #fe4240;
@@ -194,46 +321,30 @@ main {
     font-weight: bold;
 }
 
-//couleur indicateur page carousel inactif
-#carouselIndicators {
-    background-color: white;
-    opacity: 1;
-}
-
-//couleur icone emplacement carousel
-#carouselIndicators.active {
-    background-color: #fe4240;
-    opacity: 1;
-}
-
 //navBar dessous carousel
 .bottomNav {
     background-color: #fe4240;
 }
-
 //Logo 'Login'
 .loginNav {
     background-color: black;
 }
-
 //icone téléphone
 .fa-phone {
     color: white;
     transform: rotateY(180deg);
 }
-
 //numéro de tel navBar
 .phoneNav {
     color: white;
 }
-
 //couleur bouton 'login', 's/'enregistrer'
 .black-button {
     background-color: black;
     border: none;
     margin: 5px;
 }
-//icone hamburger
+
 .hamburgerIcon {
     color: white;
     background-color: #fe4240;
@@ -241,76 +352,4 @@ main {
     width: 45px;
     padding-top: 12px;
     border-radius: 50%;
-}
-//texte trailer
-.movieLink,
-.movieLink:hover,
-.movieLink:active,
-.movieLink:visited {
-    color: white;
-    text-decoration: none;
-}
-//sidenav
-#mySidenav a {
-    position: absolute;
-    left: -100px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 150px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    border-radius: 0 50px 50px 0;
-}
-
-#mySidenav a:hover {
-    left: 0;
-}
-//couleur fond facebook
-#facebook {
-    top: 620px;
-    background-color: #3b5998;
-}
-//logo et cercle blanc
-.fa-facebook-f {
-    color: black;
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding-left: 8.5px;
-    padding-top: 4px;
-
-}
-//couleur fond twitter
-#twitter {
-    top: 685px;
-    background-color: #00acee;
-    word-spacing: 24px;
-}
-//logo et cercle blanc
-.fa-twitter {
-    color: black;
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding-left: 5px;
-    padding-top: 5px;
-}
-//couleur fond g+
-#googlePlus {
-    top: 749px;
-    background-color: #db4a39;
-    word-spacing: 5px;
-}
-//logo et cercle blanc
-.fa-google-plus-g {
-    color: black;
-    background-color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding-left: 3px;
-    padding-top: 5px;
 }

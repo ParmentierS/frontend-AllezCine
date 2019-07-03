@@ -4,11 +4,60 @@ const body = document.body;
 
 async function shopMovies()
 {
+    const detailsBox=document.getElementById("shopMovieDetails");
+    const trailerBox=document.getElementById("videoTrailerContainer");
+    
     const shopMovieElement = document.getElementById("shop-movies-list");
     console.log(shopMovieElement);
     const shopMoviesList=shopMovieElement.getElementsByClassName("col-md-3");
+    for(movie of shopMoviesList)
+    {
+        const title = movie.getElementsByClassName("card-title")[0];
+        const image = movie.getElementsByTagName("IMG")[0];
+        const both = [].push(title).push(image);
+        const url = img.getAttribute("src");
+        //parse the src of the image
+        const nameAndFormat = url.split("/").pop();
+        //console.log(nameAndFormat)
+        const nameGenreYear= nameAndFormat.split(".").shift().split("-");
+        //console.log(nameGenreYear);
+        const movieName=nameGenreYear[0];
+        //find movie in our database using the title
+        let movieObject=null;
+        for(let i=0;i<moviesInfoList.length;i++)
+        {
+            if(moviesInfoList[i].title.toLowerCase() == movieName)
+            {
+                movieObject=moviesInfoList[i];
+                break;
+            }
+        }
+        //if the movie is not in our database we do nothing
+        if(movieObject == null)
+        {
+        
+            console.log("pas de film au nom de :",movieName);
+            return "";
+        }
+        for(element of both)
+        {
+            element.addEventListener("click", )
+        }
+
+
+
+
+
+
+
+
+
+
+    }    
+
+
     //img et card-title 
-    
+
 }
 
 
