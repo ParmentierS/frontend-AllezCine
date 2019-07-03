@@ -167,12 +167,18 @@ async function main()
                 body.removeChild(newModal);
                 body.style["overflow"]="";
             })
+
+            /*autoplay version*/
+            /*newModal.innerHTML+="<iframe width=\"100%\" height=\"640\" src=\"https://www.youtube.com/embed/"
+            +movieObject.youtubeID
+            +"\"?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1\""
+            +" frameborder=\"0\" allow=\"accelerometer; autoplay=1; encrypted-media; gyroscope;" 
+            +" picture-in-picture\" allowfullscreen></iframe>"*/
             
             newModal.innerHTML+="<iframe width=\"100%\" height=\"640\" src=\"https://www.youtube.com/embed/"
-            +movieObject.youtubeID
-            +"?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1\""
-            +" frameborder=\"0\" allow=\"accelerometer; autoplay=1; encrypted-media; gyroscope;" 
-            +" picture-in-picture\" allowfullscreen></iframe>"
+            +movieObject.trailerURL
+            +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; " 
+            +"gyroscope; picture-in-picture\" allowfullscreen></iframe>" 
             
             newModal.innerHTML+='<p>Titre : '+movieObject.title+'</p>'
             newModal.innerHTML+='<p>Genre : '+movieObject.genre+'</p>'
