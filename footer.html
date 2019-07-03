@@ -26,6 +26,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="testsMaud/footer.css">
     <title>Accueil</title>
 </head>
 
@@ -566,7 +567,7 @@
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-4">
-                                    <button type="button" class="btn btn-danger">SEND MESSAGE</button>
+                                    <button type="button" class="btn btn-danger" id="send">SEND MESSAGE</button>
                                 </div>
                             </div>
                         </div>
@@ -736,7 +737,39 @@
                     </div>
                 </div>
             </footer>
-        <script src="display.js"></script>
+
+            <div class="modal3" id="myFormi">
+                <div class="form-popup1">
+                  <form class="form-container1">
+                  <h1 class="connect1">Confirmation</h1>
+                  <label for="first"><b>Firstname</b></label>
+                  <p class="ole"></p>
+                  <label for="last"><b>Lastname</b></label>
+                  <p class="ola"></p>
+                  <label for="email"><b>Email</b></label>
+                  <p class="olo"></p>
+                  <label for="subj"><b>Subject</b></label>
+                  <p class="olu"></p>
+                  <label for="msg"><b>Message</b></label>
+                  <p class="oly"></p>
+                  <div class="place">
+                  <button type="submit" class="btn4">Send</button>
+                  <button type="button" class="closebi">Cancel</button>
+                </div>
+                  </form>
+                  </div>
+              </div>
+
+              <div class="modal1">
+                <div class="modal-content1">
+                    <h1 class="titre">Cookie and privacy</h1>
+                   <p>This website uses cookies to ensure you the best experience on our website.</p>
+                   <button class="myBtn refuse">Refuse</button>
+                   <button class="myBtn accept">Accept</button>
+                </div>
+            </div>
+
+        <script src="assets/js/fullmerge.js"></script>
 </body>
 
 </html>

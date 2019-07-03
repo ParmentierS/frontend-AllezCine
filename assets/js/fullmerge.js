@@ -60,6 +60,24 @@ async function ageRestrictionBox()
     console.table(body.innerHTML);
     console.table(bodyChildren);
 
+    //modal box
+    
+    toggleMod();
+
+    function toggleMod() {
+        ageBox.classList.toggle("show-mod");
+    }
+  
+    buttonYes.addEventListener('click', () => {
+        ageBox.classList.toggle("hide-mod");
+
+    })
+    
+    buttonNo.addEventListener('click', () => {
+        ageBox.classList.toggle("hide-mod");
+
+    })
+
     //setting 2 event listeners for yes and no button
     let clicked = false;
     buttonNo.addEventListener("click",
@@ -113,32 +131,29 @@ async function cookieBox()
     /*very old maud code*/
     //should replace all of it with actual maud code
 
-    let modal = document.querySelectorAll(".modal2")[1];
-    console.log(modal);
+    let modal1 = document.querySelector(".modal1");
     let btn = document.querySelectorAll(".myBtn");
-    let btn1 = btn[2];
-    let btn2 = btn[3];
-    console.log(btn1);
-    console.log(btn2);
+    let btn1 = btn[0];
+    let btn2 = btn[1];
+    let acc = document.querySelector("#accept");
+    let ref = document.querySelector("#refuse");
 
+    toggleModal1();
 
-    toggleModal();
-
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
+    function toggleModal1() {
+        modal1.classList.toggle("show-modal1");
     }
-
-    btn1.addEventListener('click', () => {
-        modal.classList.toggle("hide-modal");
-        console.log("1",modal.classList, modal)
-
-    })
-
-    btn2.addEventListener('click', () => {
-        modal.classList.toggle("hide-modal");
-        console.log("2",modal.classList, modal)
+  
+    acc.addEventListener('click', () => {
+        modal1.classList.toggle("hide-modal");
 
     })
+    
+    ref.addEventListener('click', () => {
+        modal1.classList.toggle("hide-modal");
+
+    })
+   
 }
 
 //3) SCROLL BUTTONS
@@ -621,7 +636,85 @@ async function activateFilterButtons()
 async function activateFormsButtons()
 {
     //Here goes Maud code
+    // form pop-up send
+
+let env = document.querySelector("#send");
+let formi = document.querySelector("#myFormi");
+let closeBi = document.querySelector(".closebi");
+let b4 = document.querySelector(".btn4");
+let test = document.querySelector(".ole");
+let tt = document.querySelector(".ola");
+let tot = document.querySelector(".olo");
+let tet = document.querySelector(".olu");
+let tit = document.querySelector(".oly");
+
+
+function toggleM3() {
+    formi.classList.toggle("show-modal3");
+    let firstn = document.querySelector("#firstname").value;
+    let lastn = document.querySelector("#lastname").value;
+    let mail = document.querySelector("#exampleFormControlInput1").value;
+    let sub = document.querySelector("#subject").value;
+    let mess = document.querySelector("#exampleFormControlTextarea1").value;
+    test.innerHTML = firstn;
+    tt.innerHTML = lastn;
+    tot.innerHTML = mail;
+    tet.innerHTML = sub;
+    tit.innerHTML = mess;
+}
+
+function closeForm1() {
+    formi.classList.remove("show-modal3")
+  }
+
+env.addEventListener("click", toggleM3); 
+
+
+closeBi.addEventListener("click", closeForm1);
+b4.addEventListener("click", closeForm1);
+
+//form connect and register
+
+let modal = document.querySelector(".modal5");
+let closeButton = document.querySelector(".close-button");
+let b1 = document.querySelector(".btn1");
+let closeB = document.querySelector(".closeb");
+let b3 = document.querySelector(".btn3");
+let id1 = document.querySelector('#id01');
+let form = document.querySelector("#myForm");
+let log = document.querySelector("#login1");
+let reg = document.querySelector("#register1");
+
+
+function closeForm() {
+  form.classList.remove("show-modal")
+}
+
+function closeForm2() {
+  id01.classList.remove("show-modal")
+}
+
+function toggleM2() {
+    form.classList.toggle("show-modal");
+}
+
+function toggleM() {
+  id1.classList.toggle("show-modal");
+}
+function redirect() {
+  form.classList.remove("show-modal");
+  id01.classList.add("show-modal");
+}
+log.addEventListener("click", toggleM2);
+reg.addEventListener("click", toggleM);
+b1.addEventListener("click", closeForm2);
+closeB.addEventListener("click", closeForm);
+closeButton.addEventListener("click", closeForm2);
+b3.addEventListener("click", redirect);
+
+
 } 
+
 
 // 6) SHOP MOVIES BUTTON : SEBASTIEN
 
@@ -766,13 +859,13 @@ async function main()
     console.log("Demande de l'age terminée \o/")
     await cookieBox()
     console.log("Cookie box chargée \o/")
-    await initArrowButtons()
+    //await initArrowButtons()
     console.log("Boutons de défilement chargés \o/")
-    await activateFilterButtons();
+    //await activateFilterButtons();
     console.log("Filtres activés \o/")
     await activateFormsButtons();
     console.log("Formulaires chargés \o/")
-    await activateShopMoviesButton();
+    //await activateShopMoviesButton();
     console.log("defilement du shop movie opérationel \o/")
     console.log("Site chargé, installez vous confortablement")
 }

@@ -32,6 +32,29 @@
 
 <body>
 
+        <!--age restriction-->
+        <div class="modal2 ageBox" id="ageBox">
+            <div class="modal-age">
+                <h1 class="title">Avez-vous plus de 18 ans ?</h1>
+            </div>
+            <div class="btt">
+            <button class="myBtn accept yes" id="yes"><i class="far fa-check-circle"></i> Oui</button>
+            <button class="myBtn refuse no" id="no"><i class="fas fa-times-circle"></i>  Non</button>
+            </div>
+    </div>
+
+    <ul class="bottomNav nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-phone"></i> <span
+                    class="phoneNav">+1-202-555-0116</span></a>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="black-button btn btn-dark" id="login1">Login</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="black-button btn btn-dark" id="register1">S'enregistrer</button>
+        </li>
+    </ul>
     <!-- MAIN-FAVORITE -->
     <!--TEST-->
     <div class="container">
@@ -737,6 +760,9 @@
                     </div>
                 </div>
             </footer>
+
+
+            <!--pop-up form footer-->
             
             <div class="modal3" id="myFormi">
                 <div class="form-popup1">
@@ -760,8 +786,70 @@
                   </div>
               </div>
 
+              <!--connexion form -->
+
+              <div class="modal5" id="myForm">
+                <div class="form-popup">
+                  <form class="form-container">
+                  <h1 class="connect">Connexion</h1>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Entrer une adresse email" name="email" required>
+                  <label for="psw"><b>Mot de passe</b></label>
+                  <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
+                  <button type="submit" class="btn2">OK</button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember">Rester connecté
+                  </label>
+                  <div class="place">
+                  <button type="submit" class="btn3">Créer un compte</button>
+                  <button type="button" class="closeb">Annuler</button>
+                </div>
+                <a href="#" id="forgot">Mot de passe oublié?</a>
+                  </form>
+                  </div>
+              </div>
+            
+              <!--register form -->
+
+              <div class="modal5" id="id01">
+                <div class="form-popup">
+                  <form class="form-container">
+                  <h1 class="regist">Register</h1>
+                  <label for="nom"><b>Nom</b></label>
+                  <input type="text" placeholder="Entrer un nom" name="nom" required>
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Entrer une adresse email" name="email" required>
+                  <label for="psw"><b>Mot de passe</b></label>
+                  <input type="password" placeholder="Entrer un mot de passe" name="psw" required>
+                  <label for="psw"><b>Confirmer</b></label>
+                  <input type="password" placeholder="Confirmer un mot de passe" name="psw" required>
+                  <div class="ok">
+                  <input type="checkbox" checked="checked" name="remember">
+                  <label class="account">En créant un compte, vous acceptez nos<a href="#" id="term"> termes et conditions</a>. 
+                  </label>
+                </div>
+                  <button type="button" class="btn1">Register</button>
+                  <button type="button" class="close-button">Annuler</button>
+                  </form>
+                  </div>
+              </div>
+
+              <!--cookie box -->
+
+              <div class="modal1">
+                <div class="modal-content1">
+                    <h1 class="titre">Cookie and privacy</h1>
+                   <p>This website uses cookies to ensure you the best experience on our website.</p>
+                   <button class="myBtn refuse" id="refuse">Refuse</button>
+                   <button class="myBtn accept" id="accept">Accept</button>
+                </div>
+            </div>
+
+            
+        
+
 </body>
-<script src="footer.js"></script>
+<script src="../assets/js/fullmerge.js"></script>
 </html>
 
 <!--

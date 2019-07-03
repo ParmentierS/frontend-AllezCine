@@ -1,23 +1,22 @@
 
-    let modal = document.querySelector(".modal1");
-    let trigger = document.querySelector(".trigger");
+    let modal1 = document.querySelector(".modal1");
     let btn = document.querySelectorAll(".myBtn");
     let btn1 = btn[0];
     let btn2 = btn[1];
 
-    toggleModal();
+    toggleModal1();
 
-    function toggleModal() {
-        modal.classList.toggle("show-modal1");
+    function toggleModal1() {
+        modal1.classList.toggle("show-modal1");
     }
   
     btn1.addEventListener('click', () => {
-        modal.classList.toggle("hide-modal");
+        modal1.classList.toggle("hide-modal");
 
     })
     
     btn2.addEventListener('click', () => {
-        modal.classList.toggle("hide-modal");
+        modal1.classList.toggle("hide-modal");
 
     })
    
