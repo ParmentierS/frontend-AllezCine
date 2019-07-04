@@ -63,8 +63,6 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
 <details>
     <summary>Partie 1 : HTML</summary>
     ```
-    <!DOCTYPE html>
-<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -676,9 +674,7 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
                                     </div>
                                 </div>
                             </div>
-
                             <!--Deuxième ligne // pas besoin de faire une autre rangée -->
-
                             <div class="col-md-2">
                                 <div class="card-group">
                                     <div id="trailer" class="card text-center">
@@ -936,7 +932,6 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
                 <!--Fin du modal player-->
             </div>
         </div>
-
         <!-- Contact US -->
         <div class="container mt-4">
             <h2>CONTACT US</h2>
@@ -1229,33 +1224,25 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
     <!--<script src="assets/js/FormAndPop.js"></script>-->
 </body>
 
-</html>
-
-<!--
-- Crédits -
-Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
--->
-    
-
     ```
 </details>
+
 <details>
     <summary>Partie 2 : CSS</summary>
     ```
+    
     @font-face {
-  body {
+    body {
     font-family: "A750";
     src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
   }
 }
-
 .w-100 {
   width: 100% !important;
   height: 440px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .navBar {
   position: absolute;
   width: 100%;
@@ -1264,36 +1251,29 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   border: none;
   border-radius: none;
 }
-
 .navBar .navbar-nav a {
   color: white !important;
   font-size: 20px;
 }
-
 .navBar .navbar-nav .dropdown-menu a {
   color: black !important;
 }
-
 .navbar-brand {
   color: white !important;
   font-size: 45px;
   font-weight: 900;
   text-shadow: 4px 4px 2px black;
 }
-
 .my-carousel {
   top: 0;
 }
-
 .titreAllez {
   color: #fe4240;
 }
-
 .titreHome {
   color: #fe4240;
   font-size: 20px;
 }
-
 /* /!\ SEARCHBAR /!\ */
 .searchbar {
   margin-bottom: auto;
@@ -1304,7 +1284,6 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   padding: 10px;
   opacity: 0.8;
 }
-
 .search_input {
   color: white;
   border: 0;
@@ -1316,7 +1295,6 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   -o-transition: width 0.4s linear;
   transition: width 0.4s linear;
 }
-
 .searchbar:hover > .search_input {
   padding: -30px 10px;
   width: 250px;
@@ -1325,11 +1303,9 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   -o-transition: width 0.4s linear;
   transition: width 0.4s linear;
 }
-
 .searchbar:hover > .search_icon {
   color: white;
 }
-
 .search_icon {
   height: 40px;
   width: 40px;
@@ -1347,33 +1323,27 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   border-radius: 50%;
   color: white;
 }
-
 .link-nav {
   list-style: none;
 }
-
 .titreLink {
   color: white;
   font-size: 20px;
 }
-
 .titreLMO {
   font-size: 45px;
   font-weight: 700;
   text-shadow: 4px 4px 2px black;
 }
-
 .lettreLMO {
   color: #fe4240;
   font-size: 55px;
 }
-
 .descriptifFilm {
   padding-bottom: 50px;
   letter-spacing: 0.6em;
   text-shadow: 4px 4px 2px black;
 }
-
 .logoTrailer {
   background-color: #fe4240;
   width: 150px;
@@ -1387,41 +1357,33 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   display: block;
   font-weight: bold;
 }
-
 #carouselIndicators {
   background-color: white;
   opacity: 1;
 }
-
 #carouselIndicators.active {
   background-color: #fe4240;
   opacity: 1;
 }
-
 .bottomNav {
   background-color: #fe4240;
 }
-
 .loginNav {
   background-color: black;
 }
-
 .fa-phone {
   color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-
 .phoneNav {
   color: white;
 }
-
 .black-button {
   background-color: black;
   border: none;
   margin: 5px;
 }
-
 .hamburgerIcon {
   color: white;
   background-color: #fe4240;
@@ -1430,7 +1392,6 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   padding-top: 12px;
   border-radius: 50%;
 }
-
 .movieLink,
 .movieLink:hover,
 .movieLink:active,
@@ -1438,7 +1399,6 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   color: white;
   text-decoration: none;
 }
-
 #mySidenav a {
   position: absolute;
   left: -100px;
@@ -1452,16 +1412,13 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   color: white;
   border-radius: 0 50px 50px 0;
 }
-
 #mySidenav a:hover {
   left: 0;
 }
-
 #facebook {
   top: 620px;
   background-color: #3b5998;
 }
-
 /*.fa-facebook-f {
     color: black;
     background-color: white;
@@ -1477,7 +1434,6 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   background-color: #00acee;
   word-spacing: 24px;
 }
-
 /*.fa-twitter {
     color: black;
     background-color: white;
@@ -1492,7 +1448,6 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   background-color: #db4a39;
   word-spacing: 5px;
 }
-
 /*.fa-google-plus-g {
     color: black;
     background-color: white;
@@ -1502,18 +1457,15 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
     padding-left: 3px;
     padding-top: 5px;
 }*/
-
 @font-face {
   body {
     font-family: "A750";
     src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
   }
 }
-
 .card {
   border: none;
 }
-
 #plusDeFilms, #moinsDeFilms {
   border-radius: 0%;
   margin: 1%;
@@ -1521,14 +1473,12 @@ Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
   margin-right: auto;
   display: block;
 }
-
 main img {
   width: 100%;
   height: auto;
   -ms-flex-line-pack: center;
       align-content: center;
 }
-
 main #favoriteContainer {
   width: 75%;
   border: solid;
@@ -1538,39 +1488,32 @@ main #favoriteContainer {
   margin-top: 2%;
   margin-bottom: 2%;
 }
-
 main #favoriteContainer #favoriteRow {
   width: auto;
   border: none;
   border-color: #f1f1f1;
 }
-
 main #favoriteContainer #favoriteRow #titleFilm {
   font-size: 0.9em;
 }
-
 main #favoriteContainer #favoriteRow .text {
   font-size: 0.7em;
 }
-
 #shopMoviesList {
   margin-left: 50px;
 }
-
 #moviesContainer #boutonActif {
   background-color: #fe4240;
   border-radius: 0%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
-
 #moviesContainer #boutonNonActif {
   background-color: #f3f1f2;
   color: black;
   padding-top: 2%;
   padding-bottom: 2%;
 }
-
 /*.card-body {
     border: solid 2px black;
 }*/
@@ -1578,7 +1521,6 @@ main #favoriteContainer #favoriteRow .text {
   height: 375px;
   margin-top: 25px;
 }
-
 /*.text {
     background-color: #fe4240;
     margin-top: 50px;
@@ -1586,24 +1528,20 @@ main #favoriteContainer #favoriteRow .text {
 .featMovies {
   margin: 25px;
 }
-
 .shopMovies {
   margin-top: 25px;
   margin-bottom: -40px;
 }
-
 #seriesContainer #boutonActif {
   background-color: #fe4240;
   border-radius: 0%;
   padding-bottom: 2%;
   padding-top: 2%;
 }
-
 #seriesContainer #boutonActif:hover {
   background-color: #fe4240;
   color: white;
 }
-
 #seriesContainer #boutonNonActif {
   background-color: #f3f1f2;
   border-radius: 0%;
@@ -1611,61 +1549,49 @@ main #favoriteContainer #favoriteRow .text {
   padding-bottom: 2%;
   padding-top: 2%;
 }
-
 #seriesContainer #boutonNonActif:hover {
   background-color: #fe4240;
   color: white;
 }
-
 #buttonSend {
   border-radius: 0%;
   font-weight: 800;
 }
-
 #footerFormulaire {
   border-radius: 0%;
 }
-
 #siteFooter {
   margin-bottom: 0px;
   background-color: black;
 }
-
 #siteFooter #basic-addon2 {
   background-color: #fe4240;
   color: white;
   border: 0%;
   border-radius: 0%;
 }
-
 #siteFooter #subscribeFooter {
   color: #fe4240;
   font-size: 1.5em;
   text-align: center;
 }
-
 #siteFooter .motOneFooter,
 #siteFooter .motTwoFooter,
 #siteFooter .titleFooter {
   font-size: 1.1em;
 }
-
 #siteFooter .motOneFooter {
   color: #fe4240;
 }
-
 #siteFooter .motTwoFooter {
   color: white;
 }
-
 #siteFooter .titleFooter {
   color: gray;
 }
-
 #siteFooter .listeFooter {
   font-size: 0.7em;
 }
-
 #connectFooter {
   text-align: center;
   -ms-flex-line-pack: center;
@@ -1674,18 +1600,18 @@ main #favoriteContainer #favoriteRow .text {
   list-style: none;
   color: white;
 }
-
 #connectFooter p {
   font-size: 1.3em;
 }
 
-
     ```
 </details>
+
 <details>
     <summary>Partie 3 : JavaScript</summary>
     ```
-    let env = document.querySelector("#send");
+
+let env = document.querySelector("#send");
 let formi = document.querySelector("#myFormi");
 let closeBi = document.querySelector(".closebi");
 let test = document.querySelector(".ole");
@@ -1693,8 +1619,6 @@ let tt = document.querySelector(".ola");
 let tot = document.querySelector(".olo");
 let tet = document.querySelector(".olu");
 let tit = document.querySelector(".oly");
-
-
 function toggleM3() {
     formi.classList.toggle("show-modal3");
     let firstn = document.querySelector("#firstname").value;
@@ -1708,16 +1632,11 @@ function toggleM3() {
     tet.innerHTML = sub;
     tit.innerHTML = mess;
 }
-
 function closeForm1() {
     formi.classList.remove("show-modal3")
   }
-
 env.addEventListener("click", toggleM3); 
-
-
 closeBi.addEventListener("click", closeForm1);
-
 function display(element, counter)
 {
     console.log(counter + " [==>")
@@ -1730,14 +1649,11 @@ function display(element, counter)
     console.log(element.localName,element.className,element.id)
     console.log("<==] " + counter)
 }
-
 display(document.body,0);
 //0) UTILITY FUNCTIONS and global variables
-
 const body = document.body;
 const footerElement = document.getElementsByTagName("footer")[0];
 const headerElement = document.getElementsByTagName("header")[0];
-
 //fonction qui prend un certain nombre de millisecondes à s'exécuter
 // prend comme paramètre le nombre de milisecondes que la fonction doit attendre avant de se terminer
 // s'utilise en général avec l'instruction await dans une fonction asynchrone
@@ -1762,21 +1678,16 @@ function display(element, counter)
     console.log(element.localName,element.className,element.id)
     console.log("<==] " + counter)
 }
-
-
 //1) AGE RESTRICTION BOX : SEBASTIEN
-
 async function ageRestrictionBox()
 {
     //body hiding
     body.style["opacity"]=0;
-
     //getting dom elements
     const ageBox = document.getElementById("ageBox");
     const buttonYes = document.getElementsByClassName("yes")[0];
     const buttonNo = document.getElementsByClassName("no")[0];
     console.log(buttonNo,buttonYes)
-
     //everything should disappear
     const bodyChildren = body.children;
     console.table(bodyChildren);
@@ -1786,14 +1697,11 @@ async function ageRestrictionBox()
     }
     //and ageBox appear
     ageBox.style["display"]="";
-
     //showing body again
     body.style["opacity"]=1;
-    
     console.log(body,ageBox,buttonYes,buttonNo,bodyChildren);
     console.table(body.innerHTML);
     console.table(bodyChildren);
-
     //setting 2 event listeners for yes and no button
     let clicked = false;
     buttonNo.addEventListener("click",
@@ -1806,9 +1714,7 @@ async function ageRestrictionBox()
             +" frameborder=\"0\" allow=\"accelerometer; autoplay=1; encrypted-media; gyroscope;" 
             +" picture-in-picture\" allowfullscreen></iframe>"
             document.body.append(sectionVideo);
-   
             await sleep(10000);
-
             //with replace we don't keep the previous page in history
             window.location.replace("https://www.imdb.com/");
             clicked=true;  //the while loop can end now
@@ -1834,19 +1740,11 @@ async function ageRestrictionBox()
     //ageBox disappear
     ageBox.style["display"]="none";
 }
-
-
-
-
-
-
 //2) COOKIE BOX : MAUD
-
 async function cookieBox()
 {
     /*very old maud code*/
     //should replace all of it with actual maud code
-
     let modal = document.querySelectorAll(".modal2")[1];
     console.log(modal);
     let btn = document.querySelectorAll(".myBtn");
@@ -1854,37 +1752,26 @@ async function cookieBox()
     let btn2 = btn[3];
     console.log(btn1);
     console.log(btn2);
-
-
     toggleModal();
-
     function toggleModal() {
         modal.classList.toggle("show-modal");
     }
-
     btn1.addEventListener('click', () => {
         modal.classList.toggle("hide-modal");
         console.log("1",modal.classList, modal)
-
     })
-
     btn2.addEventListener('click', () => {
         modal.classList.toggle("hide-modal");
         console.log("2",modal.classList, modal)
-
     })
 }
-
 //3) SCROLL BUTTONS
-
 const TOP = true;
 const BOTTOM = false;
 const html = document.documentElement;
-
 //strangely it doesn't work here /o/
 /*const WINDOW_HEIGHT = window.innerHeight || (document.documentElement || document.body).clientHeight
 const DOCUMENT_HEIGHT = getDocHeight();
-
 function getDocHeight() 
 {
     return Math.max(
@@ -1894,26 +1781,20 @@ function getDocHeight()
     )
 }
 REAL_HEIGHT = DOCUMENT_HEIGHT - WINDOW_HEIGHT;*/
-
 //so we cheat /o/
 footerElement.scrollIntoView();
 REAL_HEIGHT= html.scrollTop;
 body.scrollTop=0; // For Safari
 html.scrollTop=0; // For Chrome, Firefox, IE and Opera
-
-
 console.log (body.scrollHeight, body.offsetHeight, 
     html.clientHeight, html.scrollHeight, html.offsetHeight)
 console.log("height of document",REAL_HEIGHT)
-
 let topButtons = null;
 let downButtons = null;
 let topButtonAlreadyVisible=false;
 let downButtonAlreadyVisible=true;
 let performingAnimationTop=false;
 let performingAnimationBottom=false;
-
-
 //create a scroll button in fixed position to the top if boolean parameter up is true
 //create a scroll button to the bottom if boolean parameter up is false
 //the button gets a fixed position 
@@ -1927,7 +1808,6 @@ function createScrollButton(up,positionX, positionY,iconText)
             v
             B<---
                 */                 
-
     const button = document.createElement("button");
     button.innerHTML=iconText;
     button.classList.add("scroll-button")
@@ -1964,9 +1844,7 @@ function createScrollButton(up,positionX, positionY,iconText)
     console.log(button);
     body.appendChild(button);
     console.log(body)
-
 }
-
 //try to include a scroll to top button in the footer
 //return true if including succeeded.
 //false otherwise
@@ -1975,10 +1853,8 @@ function includeButtonInFooter()
     const parentOfButton = footerElement.getElementsByClassName("parentButton")[0];
     if(parentOfButton)
     {
-        const afterButton = parentOfButton.getElementsByClassName("afterButton")[0];   
-        
+        const afterButton = parentOfButton.getElementsByClassName("afterButton")[0];       
         //Create button
-
         const button = document.createElement("button");
         button.innerHTML="<i class=\"fas fa-arrow-alt-circle-up\"></i>"
         +"<i class=\"fas fa-level-up-alt\"></i>"
@@ -2008,11 +1884,7 @@ function includeButtonInFooter()
         return true;
     }
     return false;
-
 }
-
-
-
 //create one scroll to top button and one scroll to bottom button on the right of the window
 async function initArrowButtons()
 {
@@ -2032,7 +1904,6 @@ async function initArrowButtons()
     {
         console.log("inclusion du bouton dans le footer non réussie")
     }
-
     topButtons = document.getElementsByClassName("scroll-button-top");
     downButtons = document.getElementsByClassName("scroll-button-bottom");
     for(let button of topButtons)
@@ -2043,11 +1914,8 @@ async function initArrowButtons()
     {
         button.style.opacity = 1;
     }
-
     window.addEventListener("scroll",scrollFunctionPlanner);
 }
-
-
 async function scrollFunctionPlanner(event)
 {
     // explanation in french of the concept of atomicity (the reason why I'm doing this)
@@ -2057,7 +1925,6 @@ async function scrollFunctionPlanner(event)
     // errors could occur in that situation
     // also the animation should not stop in the middle 
     // (irreducible and indivisble animation)
-
     if(performingAnimationTop && performingAnimationBottom)
     {
         console.log("we are doing both animation => event rejected",event.pageY);
@@ -2077,16 +1944,12 @@ async function scrollFunctionPlanner(event)
         await  animationBottomButton(event);
         performingAnimationBottom=false; //autorize access to ressource
     }
-
 }
-
 //could be improved to switch between appearing and disappearing dynamically 
-
 async function animationTopButton(event) 
 {
     //console.log("animation haute")
     let lastScrollPosition=event.pageY;
-    
     if (lastScrollPosition>600 && !topButtonAlreadyVisible) 
     {
         for(let opacity=0;opacity<=1;opacity+=0.1)
@@ -2099,9 +1962,7 @@ async function animationTopButton(event)
         }
         //console.log("testaudessusde601",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
         topButtonAlreadyVisible=true;
-    
     } 
-    
     else if(lastScrollPosition<=600 && topButtonAlreadyVisible)
     {
         for(let opacity=1;opacity>=0;opacity-=0.1)
@@ -2118,7 +1979,6 @@ async function animationTopButton(event)
     else
     {
         //console.log("else",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationTop);
-
     }    
 }
 async function animationBottomButton(event) 
@@ -2151,11 +2011,9 @@ async function animationBottomButton(event)
         }
         downButtonAlreadyVisible=false;
         //console.log("disparition",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationBottom);
-
     }
     else{
         //console.log("else",lastScrollPosition, event.pageY, topButtonAlreadyVisible, performingAnimationBottom);
-
     }  
 }
 // 3.5 LOADING JSON
@@ -2185,18 +2043,12 @@ async function loadJSON()
     {
         await sleep(500);
         //console.log("boucle")
-
     }
     console.log("chargement réussi v2");
 }
-
-
-
 // 4) MORE MOVIES LESS MOVIES FILTER BUTTON : SEBASTIEN
-
 const movieClassName = "col-md-2"
 const showingNumber=6;
-
 //remove the CSS property display:"none"; from the CSS properties of each movie of the list
 function show(listOfMovies)
 {
@@ -2205,7 +2057,6 @@ function show(listOfMovies)
         movie.style["display"]="";
     }
 }
-
 //add the CSS property display:"none"; to the CSS properties of each movie of the list
 function hide(listOfMovies)
 {
@@ -2214,7 +2065,6 @@ function hide(listOfMovies)
         movie.style["display"]="none";
     }
 }
-
 //two functions in one 
 //if complementCondition is true we get only the movies that respect the filterName
 //if complementCondition is false we get only the movies that don't respect the filterName
@@ -2231,7 +2081,6 @@ function filterMovies(filterName,moviesList, complementCondition)
         const nameGenreYear = nameAndFormat.split(".").shift().split("-");
         const movieGenre=nameGenreYear[2];
         const movieYear=nameGenreYear[1];
-
         //filterName should be a genre or a year
         //we check if it correspond to the year or the genre of each movie 
         if(movieGenre===filterName)
@@ -2248,7 +2097,6 @@ function filterMovies(filterName,moviesList, complementCondition)
         return complementCondition; 
     })
 }
-
 //two functions in one 
 //if complementCondition is true we get only the movies that respect the filterName
 //if complementCondition is false we get only the movies that don't respect the filterName
@@ -2264,8 +2112,6 @@ function filterYearMovies(filterYearStart,filterYearEnd,moviesList, complementCo
         // we remove the format and separate the three informations in an array 
         const nameGenreYear = nameAndFormat.split(".").shift().split("-");
         const movieYear=nameGenreYear[1];
-
-        
         //we check if it correspond to the span of years
         if(movieYear>=filterYearStart && movieYear<=filterYearEnd)
         {
@@ -2276,48 +2122,36 @@ function filterYearMovies(filterYearStart,filterYearEnd,moviesList, complementCo
         return complementCondition; 
     })
 }
-
 async function activateFilterButtons()
 {
     const featuredMoviesSection = document.getElementById("featured-movies");
-
     //I prefer to use the methods of the array class
     //warning to never modify featuredMoviesList directly we should copy/clone it instead
     const featuredMoviesList = Array.from(featuredMoviesSection.getElementsByClassName(movieClassName));
-
     //movies displayed on the window
     let displayedMoviesList = featuredMoviesList;  
     //movies undisplayed on the window
     let undisplayedMoviesList = [];
-
     //movies that respect the actual filter (by default there is no filter)  
     let filteredMoviesList = featuredMoviesList;
-
     //this equality should always be respected in my code 
     //undisplayed movies + displayed movies = filtered movies
-
     //button that should be active to show what is filtered
     let activeButton = document.getElementById("boutonActif");
-
     console.log(featuredMoviesList,displayedMoviesList,undisplayedMoviesList)
-
     const buttonMore = document.getElementById("plusDeFilms");
     const buttonLess = document.getElementById("moinsDeFilms");
     const buttonAll= activeButton;
-
     //by default display only a limited number of movies
     undisplayedMoviesList=filteredMoviesList.filter((element,index) => index >= showingNumber);//index is one less
     displayedMoviesList=filteredMoviesList.filter((element,index) => index < showingNumber);
     hide(undisplayedMoviesList);
     //hiding the less movie button
     buttonLess.style["display"]="none";
-    
-
     // I should take some time to simplify this
     // I was clearly too careful because I didn't know why 
     // some movies from the displayed list were not shown again after a filter
     // maybe the bug was caused by a forgotten let in a for of loop???? (corrected now)
-
     buttonMore.addEventListener("click",()=>
         {
             if(filteredMoviesList.length > showingNumber &&  displayedMoviesList.length <= showingNumber)
@@ -2335,9 +2169,7 @@ async function activateFilterButtons()
                 console.log("deactivate more button",displayedMoviesList,undisplayedMoviesList)
             }
         }
-
     )
-
     buttonLess.addEventListener("click",()=>
         {
             if(filteredMoviesList.length <= showingNumber || displayedMoviesList.length <= showingNumber)
@@ -2355,15 +2187,11 @@ async function activateFilterButtons()
                 buttonLess.style["display"]="none";
             }
         }
-
     )
-
-
     const filterButtonTable=document.getElementsByClassName("filter")
     for (let button of filterButtonTable)
     {
         button.addEventListener("click", (event)=>{
-
             console.log("event",event,"id", event.target.id,"filterL", filteredMoviesList,"completeL", featuredMoviesList, "UndL", undisplayedMoviesList,"DispL", displayedMoviesList);
             if(filteredMoviesList.length < featuredMoviesList.length)
             {
@@ -2379,7 +2207,6 @@ async function activateFilterButtons()
                 buttonMore.style["display"]="";
                 buttonLess.style["display"]="none";
                 console.log("deactivate button ", activeButton.id);
-
             }
             else
             {
@@ -2400,18 +2227,12 @@ async function activateFilterButtons()
                 buttonLess.style["display"]="none";
                 console.log("activate button ", activeButton.id);               
             }
-            
-            
-
-
-
         })
     }
     const filterYearButtonTable=document.getElementsByClassName("filterYear")
     for (let button of filterYearButtonTable)
     {
         button.addEventListener("click", (event)=>{
-
             console.log("event",event,"id", event.target.id,"filterL", filteredMoviesList,"completeL", featuredMoviesList, "UndL", undisplayedMoviesList,"DispL", displayedMoviesList);
             if(filteredMoviesList.length < featuredMoviesList.length)
             {
@@ -2427,7 +2248,6 @@ async function activateFilterButtons()
                 buttonMore.style["display"]="";
                 buttonLess.style["display"]="none";
                 console.log("deactivate button ", activeButton.id);
-
             }
             else
             {
@@ -2450,15 +2270,9 @@ async function activateFilterButtons()
                 buttonLess.style["display"]="none";
                 console.log("activate button ", activeButton.id);               
             }
-            
-            
-
-
-
         })
     }
     featuredMoviesList.forEach((movie) => {
-
         const img = movie.getElementsByTagName("img")[0];
         const url = img.getAttribute("src");
         //parse the src of the image
@@ -2467,7 +2281,6 @@ async function activateFilterButtons()
         const nameGenreYear= nameAndFormat.split(".").shift().split("-");
         //console.log(nameGenreYear);
         const movieName=nameGenreYear[0];
-
         img.addEventListener("click", 
         async()=>
         {
@@ -2482,15 +2295,13 @@ async function activateFilterButtons()
                     break;
                 }
             }
-            //if the movie is not in our database we do nothing
+            // if the movie is not in our database we do nothing
             if(movieObject == null)
             {
-            
                 console.log("pas de film au nom de :",movieName);
                 return "";
             }
-
-            //create a modal section
+            // create a modal section
             const newModal = document.createElement("section");
             const closeButton = document.createElement("button");
             /*.modal class in bootstrap
@@ -2515,9 +2326,7 @@ async function activateFilterButtons()
             newModal.style["flex-direction"]="column";
             newModal.style["text-align"]="center";
             newModal.style["background-color"]="white";
-
             body.style["overflow"]="hidden";
-
             closeButton.innerHTML="Fermer";
             closeButton.classList.add("btn");
             closeButton.classList.add("btn-danger");
@@ -2529,7 +2338,6 @@ async function activateFilterButtons()
                 body.removeChild(newModal);
                 body.style["overflow"]="";
             })
-
             /*autoplay version*/
             /*newModal.innerHTML+="<iframe width=\"100%\" height=\"640\" src=\"https://www.youtube.com/embed/"
             +movieObject.youtubeID
@@ -2541,7 +2349,6 @@ async function activateFilterButtons()
             +movieObject.trailerURL
             +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; " 
             +"gyroscope; picture-in-picture\" allowfullscreen></iframe>" 
-            
             newModal.innerHTML+='<p>Titre : '+movieObject.title+'</p>'
             newModal.innerHTML+='<p>Genre : '+movieObject.genre+'</p>'
             newModal.innerHTML+='<p>Année : '+movieObject.year+'</p>'
@@ -2550,12 +2357,10 @@ async function activateFilterButtons()
             for(let i=0;i<movieObject.actors.length;i++)
             {
                 newModal.innerHTML+='<p>'+movieObject.actors[i]+'</p>'
-
             }
             newModal.id="Modalimage"+movieName;
             newModal.appendChild(closeButton);
             body.insertBefore(newModal,body.firstChild);
-
             /*  
                 modal animation found on the web
                 opacity: 0;
@@ -2572,14 +2377,9 @@ async function activateFilterButtons()
             newModal.style["opacity"]="1";
             newModal.style["transform"]="scale(1.0)";
             newModal.style["transition"]="visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s";
-
         })
-
     }) 
-
 }
-
-
 // 5) CONTACT US LOG IN REGISTER FORMS : MAUD
 async function activateFormsButtons()
 {
@@ -2592,8 +2392,6 @@ async function activateFormsButtons()
     let tot = document.querySelector(".olo");
     let tet = document.querySelector(".olu");
     let tit = document.querySelector(".oly");
-    
-    
     function toggleM3() {
         formi.classList.toggle("show-modal3");
         let firstn = document.querySelector("#firstname").value;
@@ -2607,19 +2405,13 @@ async function activateFormsButtons()
         tet.innerHTML = sub;
         tit.innerHTML = mess;
     }
-    
     function closeForm1() {
         formi.classList.remove("show-modal3")
       }
-    
     env.addEventListener("click", toggleM3); 
-    
-    
     closeBi.addEventListener("click", closeForm1);
     b4.addEventListener("click", closeForm1);
-    
     //form connect and register
-    
     let modal = document.querySelector(".modal5");
     let closeButton = document.querySelector(".close-button");
     let b1 = document.querySelector(".btn1");
@@ -2629,20 +2421,15 @@ async function activateFormsButtons()
     let form = document.querySelector("#myForm");
     let log = document.querySelector("#login1");
     let reg = document.querySelector("#register1");
-    
-    
     function closeForm() {
       form.classList.remove("show-modal")
     }
-    
     function closeForm2() {
       id01.classList.remove("show-modal")
     }
-    
     function toggleM2() {
         form.classList.toggle("show-modal");
     }
-    
     function toggleM() {
       id1.classList.toggle("show-modal");
     }
@@ -2656,11 +2443,8 @@ async function activateFormsButtons()
     closeB.addEventListener("click", closeForm);
     closeButton.addEventListener("click", closeForm2);
     b3.addEventListener("click", redirect);
-    
 } 
-
 // 6) SHOP MOVIES BUTTON : SEBASTIEN
-
 async function activateShopMovie()
 {
     //maybe specify the number of movies of one slide in a constant 
@@ -2690,7 +2474,6 @@ async function activateShopMovie()
         const movieName=nameGenreYear[0];
         //find movie in our database using the title
         let movieObject=null;
-
         console.log(title,img,"both",both,url,nameAndFormat,nameGenreYear,movieName,movieObject)
         for(let i=0;i<moviesInfoList.length;i++)
         {
@@ -2702,8 +2485,6 @@ async function activateShopMovie()
                 break;
             }
         }
-        
-        
         for(let i=0;i<2;i++)
         {
             //if the movie is not in our database we complete the details at the best of our knowledge
@@ -2740,16 +2521,11 @@ async function activateShopMovie()
                     +"\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; " 
                     +"gyroscope; picture-in-picture\" allowfullscreen></iframe>" 
                 })
-
-
-            }
-            
+            }   
         }
-
    }  
     const scrollingLeft=document.getElementById("left-scrolling");
     const scrollingRight=document.getElementById("right-scrolling");
-
     let currentMovie = shopMoviesList[0];
     let currentIndex = 0;
     const shopMovieLength = shopMoviesList.length;
@@ -2837,10 +2613,7 @@ async function activateShopMovie()
             console.log(currentIndex,currentMovie);
         }
     );
-
 }
-
-
 //7) LAUNCH EVERYTHING ONE BY ONE
 async function main()
 {
@@ -2862,7 +2635,6 @@ async function main()
     console.log("Site chargé, installez vous confortablement")
 }
 main();
-
 /*
     - Copyright -
     Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
