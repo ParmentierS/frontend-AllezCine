@@ -1,0 +1,180 @@
+body {
+    @font-face {
+        font-family: "A750";
+        src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
+    }
+}
+// MAIN
+// CONTAINER
+.card {
+    border: none;
+}
+#plusDeFilms, #moinsDeFilms {
+    border-radius: 0%;
+    margin: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+main {
+    img {
+        width: 100%;
+        height: auto;
+        align-content: center;
+    }
+    #favoriteContainer {
+        width: 75%;
+        border: solid  ;
+        border-color:#f1f1f1;
+        margin: auto;
+        padding-top:2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        #favoriteRow {
+            width: auto;
+            border: none;
+            border-color:#f1f1f1;
+            #titleFilm {
+                font-size: 0.9em;
+            }
+            .text {
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+#shopMoviesList {
+    margin-left: 50px;
+}
+
+// FAVORITES MOVIES
+
+#moviesContainer{
+    #boutonActif {
+        background-color: #fe4240;
+        border-radius:0%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    #boutonNonActif {
+        background-color: #f3f1f2;
+        color: black;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}
+
+/*.card-body {
+    border: solid 2px black;
+}*/
+
+.card-group {
+    height: 375px;
+    margin-top: 25px;
+}
+
+/*.text {
+    background-color: #fe4240;
+    margin-top: 50px;
+}*/
+
+.featMovies {
+    margin: 25px;
+}
+
+.shopMovies {
+    margin-top: 25px;
+    margin-bottom: -40px;
+}
+
+
+// FAVORITES SERIES
+#seriesContainer{
+    #boutonActif {
+        background-color: #fe4240;
+        border-radius:0%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        &:hover{
+            background-color:#fe4240; 
+            color: white;
+        }
+    }
+    #boutonNonActif {
+        background-color: #f3f1f2;
+        border-radius:0%;
+        color: black;
+        padding-bottom:2%;
+        padding-top: 2%;
+        &:hover{
+            background-color:#fe4240; 
+            color: white;
+        }
+    }
+}
+
+// SHOP
+
+// CONTACT FORM
+
+// Footer
+#buttonSend {
+    border-radius: 0%;
+    font-weight: 800;
+}
+#footerFormulaire {
+    border-radius: 0%;
+}
+#siteFooter {
+    margin-bottom: 0px;
+    background-color: black;
+
+    #basic-addon2 {
+        background-color: #fe4240;
+        color: white;
+        border: 0%;
+        border-radius: 0%;
+    }
+    #subscribeFooter {
+        color: #fe4240;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .motOneFooter,
+    .motTwoFooter,
+    .titleFooter {
+        font-size: 1.1em;
+    }
+
+    .motOneFooter {
+        color: #fe4240;
+    }
+
+    .motTwoFooter {
+        color: white;
+    }
+
+    .titleFooter {
+        color: gray;
+    }
+
+    .listeFooter {
+        font-size: 0.7em;
+    }
+}
+
+#connectFooter {
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+    p {
+        font-size: 1.3em;
+    }
+
+}
+

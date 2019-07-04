@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "A750";
+    src: url("/assets/fonts/A750SansBold.ttf") format("ttf");
+    }
+
+.modal1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.modal-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    font-family: "A750";
+    color: white;
+
+}
+.myBtn {
+    float: left;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #fe4240;
+    color: white;
+    border-style: none;
+    font-family: "A750";
+}
+.accept {
+    float:right;
+}
+.myBtn:hover {
+    background-color: white;
+    color: #fe4240;
+}
+.show-modal1 {
+    color: white;
+}
+.hide-modal {
+    display:none;
+}
+.titre {
+    color:rgba(254, 66, 64,1);
+    opacity: 1;
+}
+
