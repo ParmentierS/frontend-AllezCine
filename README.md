@@ -62,6 +62,7 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
 <p>Dans cette partie, vous allez pouvoir découvrir le code qui a été utilisé pour le projet</p>
 <details>
     <summary>Partie 1 : HTML</summary>
+
     ```
 
 <head>
@@ -1225,10 +1226,12 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
 </body>
 
     ```
+
 </details>
 
 <details>
     <summary>Partie 2 : CSS</summary>
+
     ```
     
     @font-face {
@@ -1605,10 +1608,12 @@ main #favoriteContainer #favoriteRow .text {
 }
 
     ```
+
 </details>
 
 <details>
     <summary>Partie 3 : JavaScript</summary>
+
     ```
 
 let env = document.querySelector("#send");
@@ -2635,10 +2640,7 @@ async function main()
     console.log("Site chargé, installez vous confortablement")
 }
 main();
-/*
-    - Copyright -
-    Made by Maud Barbier, Ludovic Lambinon, Maxim Lopez & Sébastien Parmentier
-*/
 
     ```
+
 </details>
