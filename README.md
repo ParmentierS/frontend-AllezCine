@@ -60,10 +60,11 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
 
 # Présentation du code 
 <p>Dans cette partie, vous allez pouvoir découvrir le code qui a été utilisé pour le projet</p>
+
 <details>
     <summary>Partie 1 : HTML</summary>
 
-    ```
+    ```markdown
 
 <head>
     <meta charset="UTF-8">
@@ -1232,7 +1233,7 @@ Il suffit de cloner le dépôt ou de télécharger le zip de ce dernier. Il est 
 <details>
     <summary>Partie 2 : CSS</summary>
 
-    ```
+    ```markdown
     
     @font-face {
     body {
@@ -1614,7 +1615,7 @@ main #favoriteContainer #favoriteRow .text {
 <details>
     <summary>Partie 3 : JavaScript</summary>
 
-    ```
+    ```markdown
 
 let env = document.querySelector("#send");
 let formi = document.querySelector("#myFormi");
