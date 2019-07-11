@@ -4,7 +4,7 @@
 
 ---
 
-# Lien des consoles
+# Lien des consignes
 [Consignes](https://github.com/becodeorg/CRL-Turing-3.11/tree/master/Projets/AllezCine)
 
 ## Objectifs
